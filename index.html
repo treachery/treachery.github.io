@@ -1,1709 +1,1895 @@
 <!DOCTYPE html>
-<html style="display: none;" lang="zh">
-    <head>
-    <meta charset="utf-8">
-    <!--
-        © Material Theme
-        https://github.com/viosey/hexo-theme-material
-        Version: 1.5.0 -->
-    <script>
-        window.materialVersion = "1.5.0"
-        // Delete localstorage with these tags
-        window.oldVersion = [
-            'codestartv1',
-            '1.3.4',
-            '1.4.0',
-            '1.4.0b1'
-        ]
-    </script>
-
-    <!-- dns prefetch -->
-    <meta http-equiv="x-dns-prefetch-control" content="on">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- Title -->
-    
-    <title>
-        
-        cxf&#39;s blog
-    </title>
-
-    <!-- Meta & Info -->
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <meta name="format-detection" content="telephone=no"/>
-    <meta name="theme-color" content="#0097A7">
-    <meta name="author" content="treachery">
-    <meta name="description" itemprop="description" content="那一天我二十一岁，在我一生的黄金时代。我有好多奢望。我想爱，想吃，还想在一瞬间变成天上半明半暗的云。后来我才知道，生活就是个缓慢受锤的过程，人一天天老下去，奢望也一天天消失，最后变得像挨了锤的牛一样。可是我过二十一岁生日时没有预见到这一点。我觉得自己会永远生猛下去，什么也锤不了我。">
-    <meta name="keywords" content="treachery, blog, hexo, Web, 博客">
-
-    <!-- Import lsloader -->
-    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(key){try{localStorage.removeItem(key)}catch(e){}};lsloader.setLS=function(key,val){try{localStorage.setItem(key,val)}catch(e){}};lsloader.getLS=function(key){var val="";try{val=localStorage.getItem(key)}catch(e){val=""}return val};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var keys=[];for(var i=0;i<localStorage.length;i++){keys.push(localStorage.key(i))}keys.forEach(function(key){var data=lsloader.getLS(key);if(window.oldVersion){var remove=window.oldVersion.reduce(function(p,c){return p||data.indexOf("/*"+c+"*/")!==-1},false);if(remove){lsloader.removeLS(key)}}})}catch(e){}};lsloader.clean();lsloader.load=function(jsname,jspath,cssonload,isJs){if(typeof cssonload==="boolean"){isJs=cssonload;cssonload=undefined}isJs=isJs||false;cssonload=cssonload||function(){};var code;code=this.getLS(jsname);if(code&&code.indexOf(versionString)===-1){this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload,isJs);return}if(code){var versionNumber=code.split(versionString)[0];if(versionNumber!=jspath){console.log("reload:"+jspath);this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload,isJs);return}code=code.split(versionString)[1];if(isJs){this.jsRunSequence.push({name:jsname,code:code});this.runjs(jspath,jsname,code)}else{document.getElementById(jsname).appendChild(document.createTextNode(code));cssonload()}}else{this.requestResource(jsname,jspath,cssonload,isJs)}};lsloader.requestResource=function(name,path,cssonload,isJs){var that=this;if(isJs){this.iojs(path,name,function(path,name,code){that.setLS(name,path+versionString+code);that.runjs(path,name,code)})}else{this.iocss(path,name,function(code){document.getElementById(name).appendChild(document.createTextNode(code));that.setLS(name,path+versionString+code)},cssonload)}};lsloader.iojs=function(path,jsname,callback){var that=this;that.jsRunSequence.push({name:jsname,code:""});try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(path,jsname,xhr.response);return}}that.jsfallback(path,jsname)}};xhr.send(null)}catch(e){that.jsfallback(path,jsname)}};lsloader.iocss=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.iofonts=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.runjs=function(path,name,code){if(!!name&&!!code){for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code=code}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var script=document.createElement("script");script.appendChild(document.createTextNode(this.jsRunSequence[0].code));script.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(script);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var that=this;var script=document.createElement("script");script.src=this.jsRunSequence[0].path;script.type="text/javascript";this.jsRunSequence[0].status="loading";script.onload=function(){that.jsRunSequence.shift();if(that.jsRunSequence.length>0){that.runjs()}};document.body.appendChild(script)}};lsloader.tagLoad=function(path,name){this.jsRunSequence.push({name:name,code:"",path:path,status:"failed"});this.runjs()};lsloader.jsfallback=function(path,name){if(!!this.jsnamemap[name]){return}else{this.jsnamemap[name]=name}for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code="";this.jsRunSequence[k].status="failed";this.jsRunSequence[k].path=path}}this.runjs()};lsloader.cssfallback=function(path,name,cssonload){if(!!this.cssnamemap[name]){return}else{this.cssnamemap[name]=1}var link=document.createElement("link");link.type="text/css";link.href=path;link.rel="stylesheet";link.onload=link.onerror=cssonload;var root=document.getElementsByTagName("script")[0];root.parentNode.insertBefore(link,root)};lsloader.runInlineScript=function(scriptId,codeId){var code=document.getElementById(codeId).innerText;this.jsRunSequence.push({name:scriptId,code:code});this.runjs()};lsloader.loadCombo=function(jslist){var updateList="";var requestingModules={};for(var k in jslist){var LS=this.getLS(jslist[k].name);if(!!LS){var version=LS.split(versionString)[0];var code=LS.split(versionString)[1]}else{var version=""}if(version==jslist[k].path){this.jsRunSequence.push({name:jslist[k].name,code:code,path:jslist[k].path})}else{this.jsRunSequence.push({name:jslist[k].name,code:null,path:jslist[k].path,status:"comboloading"});requestingModules[jslist[k].name]=true;updateList+=(updateList==""?"":";")+jslist[k].path}}var that=this;if(!!updateList){var xhr=new XMLHttpRequest;xhr.open("get",combo+updateList,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){that.runCombo(xhr.response,requestingModules);return}}else{for(var i in that.jsRunSequence){if(requestingModules[that.jsRunSequence[i].name]){that.jsRunSequence[i].status="failed"}}that.runjs()}}};xhr.send(null)}this.runjs()};lsloader.runCombo=function(comboCode,requestingModules){comboCode=comboCode.split("/*combojs*/");comboCode.shift();for(var k in this.jsRunSequence){if(!!requestingModules[this.jsRunSequence[k].name]&&!!comboCode[0]){this.jsRunSequence[k].status="comboJS";this.jsRunSequence[k].code=comboCode[0];this.setLS(this.jsRunSequence[k].name,this.jsRunSequence[k].path+versionString+comboCode[0]);comboCode.shift()}}this.runjs()}})();</script>
-
-    <!-- Import queue -->
-    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
-
-    <!-- Favicons -->
-    <link rel="icon shortcut" type="image/ico" href="/img/favicon.jpeg">
-    <link rel="icon" sizes="192x192" href="/img/favicon.jpeg">
-    <link rel="apple-touch-icon" href="/img/favicon.jpeg">
-
-    <!--iOS -->
-    <meta name="apple-mobile-web-app-title" content="Title">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="HandheldFriendly" content="True">
-    <meta name="MobileOptimized" content="480">
-
-    <!-- Add to homescreen for Chrome on Android -->
-    <meta name="mobile-web-app-capable" content="yes">
-
-    <!-- Add to homescreen for Safari on iOS -->
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="cxf&#39;s blog">
-
-    <!-- Site Verification -->
-    
-    
-
-    <!-- RSS -->
-    
-        
-            <link rel=alternate type="application/atom+xml" href="atom.xml">
-        
-    
-
-    <!--[if lte IE 9]>
-        <link rel="stylesheet" href="/css/ie-blocker.css">
-
-        
-            <script src="/js/ie-blocker.zhCN.js"></script>
-        
-    <![endif]-->
-
-    <!-- Import CSS -->
-    
-        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
-        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?MKetZV3cUTfDxvMffaOezg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
-
-        
-            
-        
-
-    
-
-    
-
-    <!-- Config CSS -->
-
-<!-- Other Styles -->
-<style>
-  body, html {
-    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
-    overflow-x: hidden !important;
-  }
+<html>
+<head>
+  <meta charset="utf-8">
   
-  code {
-    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-  }
 
-  a {
-    color: #00838F;
-  }
-
-  .mdl-card__media,
-  #search-label,
-  #search-form-label:after,
-  #scheme-Paradox .hot_tags-count,
-  #scheme-Paradox .sidebar_archives-count,
-  #scheme-Paradox .sidebar-colored .sidebar-header,
-  #scheme-Paradox .sidebar-colored .sidebar-badge{
-    background-color: #0097A7 !important;
-  }
-
-  /* Sidebar User Drop Down Menu Text Color */
-  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
-  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
-    color: #0097A7 !important;
-  }
-
-  #post_entry-right-info,
-  .sidebar-colored .sidebar-nav li:hover > a,
-  .sidebar-colored .sidebar-nav li:hover > a i,
-  .sidebar-colored .sidebar-nav li > a:hover,
-  .sidebar-colored .sidebar-nav li > a:hover i,
-  .sidebar-colored .sidebar-nav li > a:focus i,
-  .sidebar-colored .sidebar-nav > .open > a,
-  .sidebar-colored .sidebar-nav > .open > a:hover,
-  .sidebar-colored .sidebar-nav > .open > a:focus,
-  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
-    color: #0097A7 !important;
-  }
-
-  .toTop {
-    background: #757575 !important;
-  }
-
-  .material-layout .material-post>.material-nav,
-  .material-layout .material-index>.material-nav,
-  .material-nav a {
-    color: #757575;
-  }
-
-  #scheme-Paradox .MD-burger-layer {
-    background-color: #757575;
-  }
-
-  #scheme-Paradox #post-toc-trigger-btn {
-    color: #757575;
-  }
-
-  .post-toc a:hover {
-    color: #00838F;
-    text-decoration: underline;
-  }
-
-</style>
-
-
-<!-- Theme Background Related-->
-
-    <style>
-      body{
-        background-image: url(http://img.netbian.com/file/2017/1225/cec912f837e957d14c4083819f1fc628.jpg);
-      }
-    </style>
-
-
-
-
-<!-- Fade Effect -->
-
-    <style>
-      .fade {
-        transition: all 800ms linear;
-        -webkit-transform: translate3d(0,0,0);
-        -moz-transform: translate3d(0,0,0);
-        -ms-transform: translate3d(0,0,0);
-        -o-transform: translate3d(0,0,0);
-        transform: translate3d(0,0,0);
-        opacity: 1;
-      }
-
-      .fade.out{
-        opacity: 0;
-      }
-    </style>
-
-
-<!-- Import Font -->
-<!-- Import Roboto -->
-
-    <style>
-        @font-face {
-            font-family: 'Roboto';
-            font-style: normal;
-            font-weight: 300;
-            src: local('Roboto Light'), local('Roboto-Light'), url('https://cdnjs.cat.net/ajax/libs/mdui/0.2.1/fonts/roboto/Roboto-Light.woff2') format('woff2'), url('https://cdnjs.cat.net/ajax/libs/mdui/0.2.1/fonts/roboto/Roboto-Light.woff') format('woff');
-        }
-        @font-face {
-            font-family: 'Roboto';
-            font-style: italic;
-            font-weight: 300;
-            src: local('Roboto LightItalic'), local('Roboto-LightItalic'), url('https://cdnjs.cat.net/ajax/libs/mdui/0.2.1/fonts/roboto/Roboto-LightItalic.woff2') format('woff2'), url('https://cdnjs.cat.net/ajax/libs/mdui/0.2.1/fonts/roboto/Roboto-LightItalic.woff') format('woff');
-          }
-        @font-face {
-            font-family: 'Roboto';
-            font-style: normal;
-            font-weight: 400;
-            src: local('Roboto Regular'), local('Roboto-Regular'), url('https://cdnjs.cat.net/ajax/libs/mdui/0.2.1/fonts/roboto/Roboto-Regular.woff2') format('woff2'), url('https://cdnjs.cat.net/ajax/libs/mdui/0.2.1/fonts/roboto/Roboto-Regular.woff') format('woff');
-        }
-        @font-face {
-            font-family: 'Roboto';
-            font-style: italic;
-            font-weight: 400;
-            src: local('Roboto RegularItalic'), local('Roboto-RegularItalic'), url('https://cdnjs.cat.net/ajax/libs/mdui/0.2.1/fonts/roboto/Roboto-RegularItalic.woff2') format('woff2'), url('https://cdnjs.cat.net/ajax/libs/mdui/0.2.1/fonts/roboto/Roboto-RegularItalic.woff') format('woff');
-          }
-        @font-face {
-            font-family: 'Roboto';
-            font-style: normal;
-            font-weight: 500;
-            src: local('Roboto Medium'), local('Roboto-Medium'), url('https://cdnjs.cat.net/ajax/libs/mdui/0.2.1/fonts/roboto/Roboto-Medium.woff2') format('woff2'), url('https://cdnjs.cat.net/ajax/libs/mdui/0.2.1/fonts/roboto/Roboto-Medium.woff') format('woff');
-        }
-        @font-face {
-            font-family: 'Roboto';
-            font-style: italic;
-            font-weight: 500;
-            src: local('Roboto MediumItalic'), local('Roboto-MediumItalic'), url('https://cdnjs.cat.net/ajax/libs/mdui/0.2.1/fonts/roboto/Roboto-MediumItalic.woff2') format('woff2'), url('https://cdnjs.cat.net/ajax/libs/mdui/0.2.1/fonts/roboto/Roboto-MediumItalic.woff') format('woff');
-        }
-        @font-face {
-            font-family: 'Material Icons';
-            font-style: normal;
-            font-weight: 400;
-            src: local('Material Icons'),
-            local('MaterialIcons-Regular'),
-            url(https://cdnjs.cat.net/ajax/libs/material-design-icons/3.0.1/iconfont/MaterialIcons-Regular.woff2) format('woff2'),
-            url(https://cdnjs.cat.net/ajax/libs/material-design-icons/3.0.1/iconfont/MaterialIcons-Regular.woff) format('woff'),
-            url(https://cdnjs.cat.net/ajax/libs/material-design-icons/3.0.1/iconfont/MaterialIcons-Regular.ttf) format('truetype');
-        }
-    </style>
-
-
-<!-- Import Material Icon -->
-
-
-
-
-
-    <!-- Import jQuery -->
-    
-        <script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
-    
-
-    <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://treachery.github.io">
-    <meta property="og:type" content="blog">
-    <meta property="og:title" content="cxf&#39;s blog">
-    <meta property="og:image" content="http://treachery.github.io/img/favicon.jpeg" />
-    <meta property="og:description" content="那一天我二十一岁，在我一生的黄金时代。我有好多奢望。我想爱，想吃，还想在一瞬间变成天上半明半暗的云。后来我才知道，生活就是个缓慢受锤的过程，人一天天老下去，奢望也一天天消失，最后变得像挨了锤的牛一样。可是我过二十一岁生日时没有预见到这一点。我觉得自己会永远生猛下去，什么也锤不了我。">
-    
-
-    
-
-    <!-- The Twitter Card protocol -->
-    <meta name="twitter:title" content="cxf&#39;s blog">
-    <meta name="twitter:description" content="那一天我二十一岁，在我一生的黄金时代。我有好多奢望。我想爱，想吃，还想在一瞬间变成天上半明半暗的云。后来我才知道，生活就是个缓慢受锤的过程，人一天天老下去，奢望也一天天消失，最后变得像挨了锤的牛一样。可是我过二十一岁生日时没有预见到这一点。我觉得自己会永远生猛下去，什么也锤不了我。">
-    <meta name="twitter:image" content="http://treachery.github.io/img/favicon.jpeg">
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content="http://treachery.github.io" />
-
-    <!-- Add canonical link for SEO -->
-    
-        <link rel="canonical" href="http://treachery.github.io" />
-    
-
-    <!-- Structured-data for SEO -->
-    
-        
-<script type="application/ld+json">
-{
-    "@context": "http://schema.org",
-    "@type": "Website",
-    "publisher": {
-        "@type": "Organization",
-        "name": "cxf&#39;s blog",
-        "logo": "/img/favicon.jpeg"
-    },
-    "url": "http://treachery.github.io",
-    "image": {
-        "@type": "ImageObject",
-        "url": "/img/favicon.jpeg"
-    },
-    "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "http://treachery.github.io"
-    },
-    "description": "那一天我二十一岁，在我一生的黄金时代。我有好多奢望。我想爱，想吃，还想在一瞬间变成天上半明半暗的云。后来我才知道，生活就是个缓慢受锤的过程，人一天天老下去，奢望也一天天消失，最后变得像挨了锤的牛一样。可是我过二十一岁生日时没有预见到这一点。我觉得自己会永远生猛下去，什么也锤不了我。"
-}
-</script>
-
-
-
-
-    
-
-    <!-- Analytics -->
-    
-    
-    
-
-    <!-- Custom Head -->
-    
-
+  
+  <title>cxf&#39;s blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="那一天我二十一岁，在我一生的黄金时代。我有好多奢望。我想爱，想吃，还想在一瞬间变成天上半明半暗的云。后来我才知道，生活就是个缓慢受锤的过程，人一天天老下去，奢望也一天天消失，最后变得像挨了锤的牛一样。可是我过二十一岁生日时没有预见到这一点。我觉得自己会永远生猛下去，什么也锤不了我。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="cxf&#39;s blog">
+<meta property="og:url" content="http://treachery.github.io/index.html">
+<meta property="og:site_name" content="cxf&#39;s blog">
+<meta property="og:description" content="那一天我二十一岁，在我一生的黄金时代。我有好多奢望。我想爱，想吃，还想在一瞬间变成天上半明半暗的云。后来我才知道，生活就是个缓慢受锤的过程，人一天天老下去，奢望也一天天消失，最后变得像挨了锤的牛一样。可是我过二十一岁生日时没有预见到这一点。我觉得自己会永远生猛下去，什么也锤不了我。">
+<meta property="og:locale" content="zh-CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="cxf&#39;s blog">
+<meta name="twitter:description" content="那一天我二十一岁，在我一生的黄金时代。我有好多奢望。我想爱，想吃，还想在一瞬间变成天上半明半暗的云。后来我才知道，生活就是个缓慢受锤的过程，人一天天老下去，奢望也一天天消失，最后变得像挨了锤的牛一样。可是我过二十一岁生日时没有预见到这一点。我觉得自己会永远生猛下去，什么也锤不了我。">
+  
+    <link rel="alternate" href="/atom.xml" title="cxf&#39;s blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 
-
-    
-        <body id="scheme-Paradox" class="lazy">
-            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
-                
-
-                <!-- Main Container -->
-                <main class="material-layout__content" id="main">
-
-                    <!-- Top Anchor -->
-                    <div id="top"></div>
-
-                    
-                        <!-- Hamburger Button -->
-                        <button class="MD-burger-icon sidebar-toggle">
-                            <span class="MD-burger-layer"></span>
-                        </button>
-                    
-
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-        <!-- Paradox Header -->
-        <!-- Daily pic -->
-<div class="mdl-card mdl-shadow--2dp daily-pic mdl-cell mdl-cell--8-col index-top-block">
-
-    <!-- Pic & Slogan -->
-    <div class="mdl-card__media mdl-color-text--grey-50" style="background-image:url(/img/daily_pic.jpg)">
-        <p class="index-top-block-slogan"><a href="">
-        
-            
-                那一天我二十一岁，在我一生的黄金时代。我有好多奢望。我想爱，想吃，还想在一瞬间变成天上半明半暗的云。后来我才知道，生活就是个缓慢受锤的过程，人一天天老下去，奢望也一天天消失，最后变得像挨了锤的牛一样。可是我过二十一岁生日时没有预见到这一点。我觉得自己会永远生猛下去，什么也锤不了我。
-            
-        
-        </a></p>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">cxf&#39;s blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">孤星独吟</a>
+        </h2>
+      
     </div>
-
-    <!-- Avatar & Name -->
-    <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
-        <!-- Author Avatar -->
-        <div id="author-avatar">
-            <img src="http://ww2.sinaimg.cn/large/7f318987jw1f72m7gv450j205k05kmx1.jpg" width="32px" height="32px" alt="avatar">
-        </div>
-        <div>
-            <strong>treachery</strong>
-        </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://treachery.github.io"></form>
+      </div>
     </div>
-</div>
-
-        <!-- Blog info -->
-<div class="mdl-card mdl-shadow--2dp something-else mdl-cell mdl-cell--8-col mdl-cell--4-col-desktop index-top-block">
-
-    <!-- Search -->
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-个人简历" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/12/28/个人简历/" class="article-date">
+  <time datetime="2017-12-27T17:13:10.000Z" itemprop="datePublished">2017-12-28</time>
+</a>
     
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/简历/">简历</a>
+  </div>
 
-
-
-
-    <!-- Local -->
-    <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable" method="post" action="">
-        <label id="search-label" class="mdl-button mdl-js-ripple-effect mdl-js-button mdl-button--fab mdl-color--accent mdl-shadow--4dp" for="search">
-            <i class="material-icons mdl-color-text--white" role="presentation">search</i>
-        </label>
-
-        <form autocomplete="off" id="search-form" class="mdl-textfield__expandable-holder">
-            <input type="text" id="search" class="form-control mdl-textfield__input search-input" name="q" results="0" placeholder=""/>
-            <label id="search-form-label" class="mdl-textfield__label" for="search"></label>
-        </form>
-    </div>
-    <div id="local-search-result"></div>
-
-
-
-    <!-- LOGO -->
-    <div class="something-else-logo mdl-color--white mdl-color-text--grey-600">
-        <a href="about.html" target="_blank">
-            <img src="http://ww2.sinaimg.cn/large/7f318987jw1f72m7gv450j205k05kmx1.jpg" alt="logo" />
-        </a>
-    </div>
-
-    <!-- Infomation -->
-    <div class="mdl-card__supporting-text meta meta--fill mdl-color-text--grey-600">
-        <!-- Blog Title -->
-        <div>
-            <strong>cxf&#39;s blog</strong>
-        </div>
-        <div class="section-spacer"></div>
-
-        <!-- Pages -->
-        <button id="show-pages-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-            <i class="material-icons" role="presentation">view_carousel</i>
-            <span class="visuallyhidden">Pages</span>
-        </button>
-        <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="show-pages-button">
-            
-                <a class="index_share-link" href="/tags.html" title="标签">
-                    <li class="mdl-menu__item mdl-js-ripple-effect">
-                        标签
-                    </li>
-                </a>
-            
-                <a class="index_share-link" href="/timeline.html" title="时间线">
-                    <li class="mdl-menu__item mdl-js-ripple-effect">
-                        时间线
-                    </li>
-                </a>
-            
-                <a class="index_share-link" href="/gallery.html" title="映像">
-                    <li class="mdl-menu__item mdl-js-ripple-effect">
-                        映像
-                    </li>
-                </a>
-            
-                <a class="index_share-link" href="/links.html" title="友链">
-                    <li class="mdl-menu__item mdl-js-ripple-effect">
-                        友链
-                    </li>
-                </a>
-            
-                <a class="index_share-link" href="/about.html" title="简历">
-                    <li class="mdl-menu__item mdl-js-ripple-effect">
-                        简历
-                    </li>
-                </a>
-            
-        </ul>
-
-        <!-- Menu -->
-        <button id="menubtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-            <i class="material-icons" role="presentation">more_vert</i>
-            <span class="visuallyhidden">show menu</span>
-        </button>
-        <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="menubtn">
-            
-
-            
-                <a class="index_share-link" href="atom.xml">
-                    <li class="mdl-menu__item mdl-js-ripple-effect">
-                        文章 RSS
-                    </li>
-                </a>
-            
-
-            
-                <a class="index_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=cxf&#39;s blog&url=http://treachery.github.io&pic=http://treachery.github.io/img/favicon.jpeg&searchPic=false&style=simple" target="_blank">
-                    <li class="mdl-menu__item mdl-js-ripple-effect">
-                        分享到微博
-                    </li>
-                </a>
-            
-
-            
-                <a class="index_share-link" href="https://twitter.com/intent/tweet?text=cxf&#39;s blog&url=http://treachery.github.io&via=treachery" target="_blank">
-                    <li class="mdl-menu__item mdl-js-ripple-effect">
-                        分享到 Twitter
-                    </li>
-                </a>
-            
-
-            
-                <a class="index_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://treachery.github.io" target="_blank">
-                    <li class="mdl-menu__item mdl-js-ripple-effect">
-                        分享到 Facebook
-                    </li>
-                </a>
-            
-
-            
-                <a class="index_share-link" href="https://plus.google.com/share?url=http://treachery.github.io" target="_blank">
-                    <li class="mdl-menu__item mdl-js-ripple-effect">
-                        分享到 Google+
-                    </li>
-                </a>
-            
-
-            
-
-            
-
-            
-        </ul>
-    </div>
-</div>
-
+  </div>
+  <div class="article-inner">
     
-    <div class="locate-thumbnail-symbol"></div>
-
-    <!-- Pin on top -->
     
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/12/28/个人简历/">个人简历</a>
+    </h1>
+  
 
-    <!-- Normal Post -->
+      </header>
     
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/12/28/个人简历/">个人简历</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            个人简历
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/12/28/个人简历/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="http://ww2.sinaimg.cn/large/7f318987jw1f72m7gv450j205k05kmx1.jpg" width="44px" height="44px" alt="treachery's avatar">
-            </div>
-            <div>
-                <strong>treachery</strong>
-                <span>12月 28, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/简历/">简历</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/11/24/golang相关/GOadvices/">GOadvices</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/11/24/golang相关/GOadvices/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="http://ww2.sinaimg.cn/large/7f318987jw1f72m7gv450j205k05kmx1.jpg" width="44px" height="44px" alt="treachery's avatar">
-            </div>
-            <div>
-                <strong>treachery</strong>
-                <span>11月 24, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/golang相关/">golang相关</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/11/02/管控中心/管控中心文件中转服务/">文件中转服务逻辑</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/11/02/管控中心/管控中心文件中转服务/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="http://ww2.sinaimg.cn/large/7f318987jw1f72m7gv450j205k05kmx1.jpg" width="44px" height="44px" alt="treachery's avatar">
-            </div>
-            <div>
-                <strong>treachery</strong>
-                <span>11月 02, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/管控中心/">管控中心</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/10/13/管控中心/管控中心数据库连接池管理/">数据库连接池管理</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            ...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/10/13/管控中心/管控中心数据库连接池管理/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="http://ww2.sinaimg.cn/large/7f318987jw1f72m7gv450j205k05kmx1.jpg" width="44px" height="44px" alt="treachery's avatar">
-            </div>
-            <div>
-                <strong>treachery</strong>
-                <span>10月 13, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/管控中心/">管控中心</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/10/12/leaf博客/5_数据存储/">数据存储</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            leaf是基于go语言实现开源网游服务器架构,见github.com/name5566/leaf
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/10/12/leaf博客/5_数据存储/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="http://ww2.sinaimg.cn/large/7f318987jw1f72m7gv450j205k05kmx1.jpg" width="44px" height="44px" alt="treachery's avatar">
-            </div>
-            <div>
-                <strong>treachery</strong>
-                <span>10月 12, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/golang/">golang</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/10/08/leaf博客/4_消息处理Processor/">消息处理</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            leaf是基于go语言实现开源网游服务器架构,见github.com/name5566/leaf
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/10/08/leaf博客/4_消息处理Processor/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="http://ww2.sinaimg.cn/large/7f318987jw1f72m7gv450j205k05kmx1.jpg" width="44px" height="44px" alt="treachery's avatar">
-            </div>
-            <div>
-                <strong>treachery</strong>
-                <span>10月 08, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/golang/">golang</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/10/05/leaf博客/3_gate模块/">gate模块解析</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            leaf是基于go语言实现开源网游服务器架构,见github.com/name5566/leaf
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/10/05/leaf博客/3_gate模块/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="http://ww2.sinaimg.cn/large/7f318987jw1f72m7gv450j205k05kmx1.jpg" width="44px" height="44px" alt="treachery's avatar">
-            </div>
-            <div>
-                <strong>treachery</strong>
-                <span>10月 05, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/golang/">golang</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/10/02/leaf博客/2_module管理/">module管理</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            leaf是基于go语言实现开源网游服务器架构,见github.com/name5566/leaf
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/10/02/leaf博客/2_module管理/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="http://ww2.sinaimg.cn/large/7f318987jw1f72m7gv450j205k05kmx1.jpg" width="44px" height="44px" alt="treachery's avatar">
-            </div>
-            <div>
-                <strong>treachery</strong>
-                <span>10月 02, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/golang/">golang</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/09/30/leaf博客/1_环境搭建/">leaf环境搭建</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            leaf是基于go语言实现开源网游服务器架构,见github.com/name5566/leaf
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/09/30/leaf博客/1_环境搭建/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="http://ww2.sinaimg.cn/large/7f318987jw1f72m7gv450j205k05kmx1.jpg" width="44px" height="44px" alt="treachery's avatar">
-            </div>
-            <div>
-                <strong>treachery</strong>
-                <span>9月 30, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/golang/">golang</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/09/28/管控中心/共享内存的回复/">内存问题排查</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/09/28/管控中心/共享内存的回复/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="http://ww2.sinaimg.cn/large/7f318987jw1f72m7gv450j205k05kmx1.jpg" width="44px" height="44px" alt="treachery's avatar">
-            </div>
-            <div>
-                <strong>treachery</strong>
-                <span>9月 28, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/管控中心/">管控中心</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-
-    
-    <!-- Index nav -->
-        <nav class="material-nav mdl-cell mdl-cell--12-col">
-            <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons" role="presentation">arrow_forward</i></button></a>
-        </nav>
-    
-
-    
-        <script type="text/ls-javascript" id="thumbnail-script">
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
-    $('.post_thumbnail-random').addClass('lazy');
-
-        locatePost = locatePost.next();
-    }
-</script>
-
-    
-</div>
-
-
-                    
-                        <!-- Overlay For Active Sidebar -->
-<div class="sidebar-overlay"></div>
-
-<!-- Material sidebar -->
-<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
-    <div id="sidebar-main">
-        <!-- Sidebar Header -->
-        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.jpg);">
-    <!-- Top bar -->
-    <div class="top-bar"></div>
-
-    <!-- Sidebar toggle button -->
-    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
-        <i class="material-icons">clear_all</i>
-        <span class="mdl-button__ripple-container">
-            <span class="mdl-ripple">
-            </span>
-        </span>
-    </button>
-
-    <!-- Sidebar Avatar -->
-    <div class="sidebar-image">
-        <img src="http://ww2.sinaimg.cn/large/7f318987jw1f72m7gv450j205k05kmx1.jpg" alt="treachery's avatar">
-    </div>
-
-    <!-- Sidebar Email -->
-    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
-        526377874@qq.com
-        <b class="caret"></b>
-    </a>
-</div>
-
-
-        <!-- Sidebar Navigation  -->
-        <ul class="nav sidebar-nav">
-    <!-- User dropdown  -->
-    <li class="dropdown">
-        <ul id="settings-dropdown" class="dropdown-menu">
-            
-                <li>
-                    <a href="mailto:526377874@qq.com" target="_blank" title="Email Me">
-                        
-                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
-                        
-                        Email Me
-                    </a>
-                </li>
-            
-        </ul>
-    </li>
-
-    <!-- Homepage -->
-    
-        <li id="sidebar-first-li">
-            <a href="/">
-                
-                    <i class="material-icons sidebar-material-icons">home</i>
-                
-                主页
-            </a>
-        </li>
-        
-    
-
-    <!-- Archives  -->
-    
-        <li class="dropdown">
-            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
-                
-                    <i class="material-icons sidebar-material-icons">inbox</i>
-                
-                    归档
-                <b class="caret"></b>
-            </a>
-            <ul class="dropdown-menu">
-            <li>
-                <a class="sidebar_archives-link" href="/archives/2017/12/">十二月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/11/">十一月 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/10/">十月 2017<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/09/">九月 2017<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/07/">七月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/04/">四月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/07/">七月 2016<span class="sidebar_archives-count">1</span></a>
-            </ul>
-        </li>
-        
-    
-
-    <!-- Categories  -->
-    
-        <li class="dropdown">
-            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
-                
-                    <i class="material-icons sidebar-material-icons">apps</i>
-                
-                分类
-                <b class="caret"></b>
-            </a>
-            <ul class="dropdown-menu">
-                <li>
-                <a class="sidebar_archives-link" href="/categories/golang/">golang<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/golang相关/">golang相关<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/博客栈/">博客栈<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/简历/">简历<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/管控中心/">管控中心<span class="sidebar_archives-count">5</span></a>
-            </ul>
-        </li>
-        
-    
-
-    <!-- Pages  -->
-    
-        <li>
-            <a href="/tags.html" title="标签">
-                
-                    <i class="material-icons sidebar-material-icons">bookmark</i>
-                
-                标签
-            </a>
-        </li>
-        
-    
-        <li>
-            <a href="/timeline.html" title="时间线">
-                
-                    <i class="material-icons sidebar-material-icons">inbox</i>
-                
-                时间线
-            </a>
-        </li>
-        
-            <li class="divider"></li>
-        
-    
-        <li>
-            <a href="/gallery.html" title="映像">
-                
-                    <i class="material-icons sidebar-material-icons">photo</i>
-                
-                映像
-            </a>
-        </li>
-        
-    
-        <li>
-            <a href="/links.html" title="友链">
-                
-                    <i class="material-icons sidebar-material-icons">people</i>
-                
-                友链
-            </a>
-        </li>
-        
-            <li class="divider"></li>
-        
-    
-        <li>
-            <a href="/about.html" title="简历">
-                
-                    <i class="material-icons sidebar-material-icons">person</i>
-                
-                简历
-            </a>
-        </li>
-        
-    
-
-    <!-- Article Number  -->
-    
-        <li>
-            <a href="/archives">
-                文章总数
-                <span class="sidebar-badge">14</span>
-            </a>
-        </li>
-        
-    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="个人简历"><a href="#个人简历" class="headerlink" title="个人简历"></a>个人简历</h1><h2 id="基本信息"><a href="#基本信息" class="headerlink" title="基本信息"></a>基本信息</h2><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>姓名<br>电话<br>性别<br>邮箱</td>
+<td>陈雪峰<br>18066054700<br>男<br>526377874@qq.com</td>
+<td>头像</td>
+<td><img src="head.jpg" alt=""></td>
+</tr>
+<tr>
+<td>生日</td>
+<td>1992-11-3</td>
+<td>博客</td>
+<td>treachery.github.io</td>
+</tr>
+<tr>
+<td>学历</td>
+<td>本科</td>
+<td>求职方向</td>
+<td>golang开发</td>
+</tr>
+<tr>
+<td>居住地</td>
+<td>杭州市滨江区</td>
+<td>期望年薪</td>
+<td>20W(杭州或南京),25万(上海)</td>
+</tr>
+<tr>
+<td>毕业院校</td>
+<td>南京大学计算机科学与技术系</td>
+<td>期望工作地</td>
+<td>上海，杭州，南京</td>
+</tr>
+</tbody>
+</table>
+<h2 id="教育经历"><a href="#教育经历" class="headerlink" title="教育经历"></a>教育经历</h2><ul>
+<li>2008.09-2011.07 云南省曲靖市第一中学</li>
+<li>2011.09-2015.07 南京大学 计算机科学与技术系</li>
 </ul>
+<h2 id="工作经历"><a href="#工作经历" class="headerlink" title="工作经历"></a>工作经历</h2><table>
+<thead>
+<tr>
+<th>2015.07-2016.06</th>
+<th>苏州瑞德盛世系统科技有限公司</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>公司介绍</td>
+<td>公司基于centos7做适配于openpower的发行版linux，产品RedOS</td>
+</tr>
+<tr>
+<td>职务</td>
+<td>系统测试工程师</td>
+</tr>
+<tr>
+<td>工作内容</td>
+<td>1.基于ltp测试套件测试对系统进行功能和性能测试 </td>
+</tr>
+<tr>
+<td></td>
+<td>2.基于autotest测试套件，对系统的kvm,qemu,libvirt做功能和性能测试</td>
+</tr>
+<tr>
+<td>离职原因</td>
+<td>公司解散</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>2016.07-至今</th>
+<th>浙江远望信息股份有限公司</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>公司介绍</td>
+<td>公司做内网安全监管，主要产品有公安网安全监管系统，应用审计系统，安全检查系统，视频网准入控制系统等</td>
+</tr>
+<tr>
+<td>职务</td>
+<td>golang开发工程师</td>
+</tr>
+<tr>
+<td>工作内容</td>
+<td>1.基于公司旧的管控中心(<strong><em>C++开发的服务端,数据库使用sqlserver</em></strong>)移植到golang版本，适配x86上centos7,龙芯上中标麒麟等环境，数据库使用mysql和达梦</td>
+</tr>
+<tr>
+<td></td>
+<td>2.参与新产品，新功能的设计，开发，性能调优以及bug修复</td>
+</tr>
+</tbody>
+</table>
+<h2 id="项目经验"><a href="#项目经验" class="headerlink" title="项目经验"></a>项目经验</h2><table>
+<thead>
+<tr>
+<th>项目名称</th>
+<th>项目时间</th>
+<th>项目描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>管控中心移植</td>
+<td>2016.07-2017.05</td>
+<td>公司所有产品都是基于同一套MVC的服务端架构,M是用于存储业务信息的数据库，V是java开发的web服务器，C是负责与客户端通讯的管控中心,管控中心主要有设备管理，日志管理，请求管理，组件管理等模块 以监管系统为例(<strong><em>部署在公安网内部，对客户机进行检查及控制</em></strong>) 客户端安装时向管控中心发送注册命令，管控中心将注册的设备信息解析入到数据库，页面上就可以管理这些设备。页面对某台设备配置了一个敏感信息的策略，管控中心会将该策略读取到内存中，客户端定期查询策略时下发下去。客户端接受到敏感信息检查策略，就按照策略定义的规则扫描客户机的文件，检查结果以日志的方式上报管控中心，管控中心调用存储过程将日志入到数据库。管理员在页面上看到某台机器上有敏感信息日志(<strong><em>某个目录的某个文件包含某些敏感关键字</em></strong>)，可以选择点击提取文件，此时web服务器向管控中心发送一个提取命令，管控中心收到后组合成固定格式下发到客户端，客户端就将文件上报到管控中心，管控中心可以根据配置和协议头判断是否缓存并解析文件，如果不需要的话直接转发到web服务器，管理员查看该文件后，觉得这个公安干警有些不守规矩，那么直接下发一条’到我办公室来一下’，干警的PC上就会跳出一个弹窗。</td>
+</tr>
+<tr>
+<td>管控中心自动化测试套件</td>
+<td>2017.05-2017.08</td>
+<td>使用go语言开发一个管控中心的测试套件，模拟web服务器，客户端，组件向管控中心发送的命令，用于管控中心的功能覆盖和性能测试。每一个测试用例是一个xml，定义该用例的初始化环境，向管控中心发送的命令，管控中心应该回复的正确信息，以及命令结束后需要验证的其他信息。测试套件和管控中心同连一个数据库，用于做数据信息验证，使用ssh免密码登陆，方面测试用例调用shell脚本进行环境配置和结果验证</td>
+</tr>
+<tr>
+<td>日志管理服务设计开发</td>
+<td>2017.10-2017-11</td>
+<td>随着设备数量变大，各个客户端上报的日志越来越多，而数据库处理速度却越来越慢，导致日志堆积。我们需要重新设计日志的处理逻辑，为了降低耦合度，我们把日志解析业务从管控中心分离出来。管控中心先将收到的日志存储到leveldb，key保存着该日志的类型，上报来源，上报时间。另一个线程不断读取leveldb，按照配置里面定义的规则和key，将日志信息存储到数据库临时表(<strong><em>这个表很多张，一个规则就生成一张表</em></strong>)。日志管理服务根据表的数量，在线程池里开多个处理任务，各自处理各自的日志解析以及入库。这样最大限度降低各自日志，各个设备之间的互相干扰</td>
+</tr>
+<tr>
+<td>文件中转服务设计开发</td>
+<td>2017.11-至今</td>
+<td>由于业务扩展，管控中心需要处理的各种文件越来越多，其中很多是转发，比如应用审计日志需要通过文件转发到一个ftp，供大数据服务分析；流量分析文件需要转发到流量分析服务地址。这样我们实现一个独立的，可扩展的文件中转服务就很有必要。目前的实现是将文件中转服务分为4个模块，接收器，派遣器，发送器，以及控制器。接收器里面主要定义管控中心接收各种文件的接口,然后通过rpc开放给管控中心调用(<strong><em>例如什么协议接收，接收后是否需要解压缩，加解密，接收后存储的路径和文件名称等</em></strong>)，接收器接收后将文件名写入管道chanReceiver。派遣器从chanReceiver里面读取文件名称解析后，知道该文件需要发送到那些地址，以及发送完成后需要做的其他操作等，派遣器将这些打包成一个发送任务(<strong><em>包含发送的文件名称，接收地址，接收完成后的信号量，以及接收完成的回调函数</em></strong>)，然后将发送任务写入到管道chanSendJob。发送总控制器根据配置文件里面的地址，生成多个发送器，每个发送器需要实现将文件发送往该地址的方法(<strong><em>根据配置文件，每个发送器可以生成1个或多个发送线程</em></strong>),发送总控制器总chanSendJob读取发送任务，根据任务类型派发到对应的发送器。总控制器读取配置文件，初始化并启动其他模块，记录运行日志，并在退出时按顺序发送信号量到各个模块保证安全退出。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="个人技能"><a href="#个人技能" class="headerlink" title="个人技能"></a>个人技能</h2><table>
+<thead>
+<tr>
+<th>技能</th>
+<th>掌握程度</th>
+<th>使用时间</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>golang</td>
+<td>熟练</td>
+<td>1.5年</td>
+</tr>
+<tr>
+<td>mysql</td>
+<td>熟练</td>
+<td>1-2年</td>
+</tr>
+<tr>
+<td>linux</td>
+<td>熟练，主要是centos7</td>
+<td>2年</td>
+</tr>
+<tr>
+<td>docker</td>
+<td>了解使用方法</td>
+<td>不到1个月，自己摸索</td>
+</tr>
+</tbody>
+</table>
+<h2 id="自我评价"><a href="#自我评价" class="headerlink" title="自我评价"></a>自我评价</h2><p>本人对服务器后端业务开发感兴趣，希望往这个方便更深入。由于公司业务场景比较单一，所以我缺少大型项目的开发经验，尤其涉及到golang比较主流的分布式，微服务等。不过我意识到自己的缺点，自己私下也在恶补，看过golang开源的游戏服务框架leaf，也自学搭建过docker，hadoop等。虽说程序员大都靠自学，但是一个更大一点的平台，牛人多一些的公司，对个人成才有很强的激励和引导作用，希望贵公司给我这个机会。</p>
 
-
-        <!-- Sidebar Footer -->
-        <!--
-I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
-If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
-It will not impact the appearance and can give developers a lot of support :)
-
-很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
-如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
-它不会影响美观并可以给开发者很大的支持和动力。 :)
--->
-
-<!-- Sidebar Divider -->
-
-
-<!-- Theme Material -->
-
-
-<!-- Help & Support -->
-<!--
-
--->
-
-<!-- Feedback -->
-<!--
-
--->
-
-<!-- About Theme -->
-<!--
-
--->
-
+      
     </div>
+    <footer class="article-footer">
+      <a data-url="http://treachery.github.io/2017/12/28/个人简历/" data-id="cjbqluqr40000rgo07a17ontp" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/简历/">简历</a></li></ul>
 
-    <!-- Sidebar Image -->
-    
+    </footer>
+  </div>
+  
+</article>
 
-</aside>
 
-                    
+  
+    <article id="post-golang相关/GOadvices" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/11/24/golang相关/GOadvices/" class="article-date">
+  <time datetime="2017-11-24T01:21:25.000Z" itemprop="datePublished">2017-11-24</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/golang相关/">golang相关</a>
+  </div>
 
-                    
-                        <!-- Footer Top Button -->
-                        <div id="back-to-top" class="toTop-wrap">
-    <a href="#top" class="toTop">
-        <i class="material-icons footer_top-i">expand_less</i>
-    </a>
-</div>
-
-                    
-
-                    <!--Footer-->
-<footer class="mdl-mini-footer" id="bottom">
-    
-        <!-- Paradox Footer Left Section -->
-        <div class="mdl-mini-footer--left-section sns-list">
-    <!-- Twitter -->
-    
-        <a href="https://twitter.com/twitter" target="_blank">
-            <button class="mdl-mini-footer--social-btn social-btn footer-sns-twitter">
-                <span class="visuallyhidden">Twitter</span>
-            </button><!--
-     --></a>
-    
-
-    <!-- Facebook -->
-    
-        <a href="https://www.facebook.com/facebook" target="_blank">
-            <button class="mdl-mini-footer--social-btn social-btn footer-sns-facebook">
-                <span class="visuallyhidden">Facebook</span>
-            </button><!--
-     --></a>
-    
-
-    <!-- Google + -->
-    
-        <a href="https://www.google.com/" target="_blank">
-            <button class="mdl-mini-footer--social-btn social-btn footer-sns-gplus">
-                <span class="visuallyhidden">Google Plus</span>
-            </button><!--
-     --></a>
-    
-
-    <!-- Weibo -->
-    
-
-    <!-- Instagram -->
-    
-
-    <!-- Tumblr -->
-    
-
-    <!-- Github -->
-    
-        <a href="https://github.com/treachery" target="_blank">
-            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
-                <span class="visuallyhidden">Github</span>
-            </button><!--
-     --></a>
-    
-
-    <!-- LinkedIn -->
-    
-
-    <!-- Zhihu -->
-    
-
-    <!-- Bilibili -->
-    
-
-    <!-- Telegram -->
+  </div>
+  <div class="article-inner">
     
     
-    <!-- V2EX -->
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/24/golang相关/GOadvices/">GOadvices</a>
+    </h1>
+  
+
+      </header>
     
-</div>
-
-
-        <!--Copyright-->
-        <div id="copyright">
-            Copyright&nbsp;©&nbsp;2016&nbsp;-<script type="text/javascript">var fd = new Date();document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script>cxf's blog
-            
-        </div>
-
-        <!-- Paradox Footer Right Section -->
-
-        <!--
-        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
-        It will not impact the appearance and can give developers a lot of support :)
-
-        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
-        它不会影响美观并可以给开发者很大的支持。 :)
-        -->
-
-        <div class="mdl-mini-footer--right-section">
-            <div>
-                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
-                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
-            </div>
-        </div>
-    
-</footer>
-
-
-                    <!-- Import JS File -->
-
-    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
-
-
-
-    <script>lsloader.load("js_js","/js/js.min.js?V/53wGualMuiPM3xoetD5Q==", true)</script>
-
-
-
-    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
-
-
-<script type="text/ls-javascript" id="NProgress-script">
-    NProgress.configure({
-        showSpinner: true
-    });
-    NProgress.start();
-    $('#nprogress .bar').css({
-        'background': '#29d'
-    });
-    $('#nprogress .peg').css({
-        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
-    });
-    $('#nprogress .spinner-icon').css({
-        'border-top-color': '#29d',
-        'border-left-color': '#29d'
-    });
-    setTimeout(function() {
-        NProgress.done();
-        $('.fade').removeClass('out');
-    }, 800);
-</script>
-
-
-
-
-
-
-
-
-
-   <!-- 使用 DISQUS js 代码 -->
-<script id="dsq-count-scr" src="//https-janebt-github-io.disqus.com/count.js" async></script>
-
-
-
-
-    <!-- Swiftye -->
-    
-
-    <!-- Local Search-->
-    
-        <script type="text/ls-javascript" id="search-local-js-script">
-    var searchFunc = function(path, search_id, content_id) {
-        'use strict';
-        $.ajax({
-            url: path,
-            dataType: 'xml',
-            success: function( xmlResponse ) {
-                // get the contents from search data
-                var datas = $( 'entry', xmlResponse ).map(function() {
-                    return {
-                        title: $( 'title', this ).text(),
-                        content: $('content',this).text(),
-                        url: $( 'url' , this).text()
-                    };
-                }).get();
-                var $input = document.getElementById(search_id);
-                var $resultContent = document.getElementById(content_id);
-                $input.addEventListener('input', function() {
-                    var str='<ul class=\"search-result-list\">';
-                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
-                    $resultContent.innerHTML = '';
-                    if (this.value.trim().length <= 0) {
-                        return;
-                    }
-                    // perform local searching
-                    datas.forEach(function(data) {
-                        var isMatch = true;
-                        var content_index = [];
-                        var data_title = data.title.trim().toLowerCase();
-                        var data_content = data.content.trim().replace(/<[^>]+>/g,'').toLowerCase();
-                        var data_url = data.url;
-                        var index_title = -1;
-                        var index_content = -1;
-                        var first_occur = -1;
-                        // only match artiles with not empty titles and contents
-                        if(data_title !== '' && data_content !== '') {
-                            keywords.forEach(function(keyword, i) {
-                                index_title = data_title.indexOf(keyword);
-                                index_content = data_content.indexOf(keyword);
-                                if( index_title < 0 && index_content < 0 ) {
-                                    isMatch = false;
-                                } else {
-                                    if (index_content < 0) {
-                                        index_content = 0;
-                                    }
-                                    if (i === 0) {
-                                        first_occur = index_content;
-                                    }
-                                }
-                            });
-                        }
-                        // show search results
-                        if (isMatch) {
-                            str += '<li><a href="'+ data_url +'" class="search-result-title" target="_blank">'+ data_title;
-                            var content = data.content.trim().replace(/<[^>]+>/g, '');
-                            if (first_occur >= 0) {
-                                // cut out characters
-                                var start = first_occur - 6;
-                                var end = first_occur + 6;
-                                if (start < 0) {
-                                    start = 0;
-                                }
-                                if (start === 0) {
-                                    end = 10;
-                                }
-                                if (end > content.length) {
-                                    end = content.length;
-                                }
-                                var match_content = content.substr(start, end);
-                                // highlight all keywords
-                                keywords.forEach(function(keyword) {
-                                    var regS = new RegExp(keyword, 'gi');
-                                    match_content = match_content.replace(regS, '<em class="search-keyword">'+keyword+'</em>');
-                                })
-                                str += '<p class="search-result">' + match_content + '...</p>' +'</a>';
-                            }
-                        }
-                    });
-                    $resultContent.innerHTML = str;
-                });
-            }
-        });
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Go-advices"><a href="#Go-advices" class="headerlink" title="Go-advices"></a>Go-advices</h1><h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><ul>
+<li>go fmt your code, make everyone happier</li>
+<li>使用fmt工具标准化代码格式(<strong><em>这个编辑器会自己做</em></strong>)</li>
+<li>multiple if statements can be collapsed into switch</li>
+<li>多个if条件判断写成switch语句(<strong><em>这个算是常识吧</em></strong>)</li>
+<li>use <code>chan struct{}</code> to pass signal<ul>
+<li><code>chan bool</code> makes it less clear, btw <code>struct{}</code> is more optimal</li>
+<li>使用结构体传递信号，chan struct</li>
+</ul>
+</li>
+<li>prefer <code>30 * time.Second</code> instead of <code>time.Duration(30) * time.Second</code></li>
+<li>这个好像是废话</li>
+<li>always wrap for-select idiom to a function</li>
+<li>把for-select结构封装成函数体</li>
+<li>group <code>const</code> declarations by type and <code>var</code> by logic and/or type</li>
+<li>按照类型对常量定义分组，按照逻辑或与关系对变量分组</li>
+<li>every blocking or IO function call should be cancelable or at least timeoutable</li>
+<li>每一个阻塞的或者IO函数都应该提供取消操作，至少应该有超时控制</li>
+<li>implement <code>Stringer</code> interface for integers const values</li>
+<li>为int型常量实现Stringer接口(<strong><em>是为了方便输出吗</em></strong>)</li>
+<li style="list-style: none"><input type="checkbox"> check your defer’s error<pre><code class="go">defer func() {
+    err := ocp.Close()
+    if err != nil {
+        rerr = err
     }
-</script>
+}()
+</code></pre>
+<ul>
+<li>不要遗漏defer语句里面的error</li>
+</ul>
+</li>
+<li>don’t use <code>checkErr</code> function which panics or does <code>os.Exit</code></li>
+<li>不要把崩溃或退出封装到检查错误函数里面</li>
+<li><p>don’t use alias for enums ‘cause this breaks type safety</p>
+<ul>
+<li><a href="https://play.golang.org/p/MGbeDwtXN3" target="_blank" rel="noopener">https://play.golang.org/p/MGbeDwtXN3</a></li>
+<li>重命名类型时1.9才引入的特性<br><code>``go
+package main
+type Status = int
+type Format = int // remove</code>=` to have type safety</li>
+</ul>
+<p>const A Status = 1<br>const B Format = 1</p>
+<p>func main() {<br>  println(A == B)<br>}<br>```</p>
+</li>
+<li>if you’re going to omit returning params, do it explicitly<ul>
+<li>so prefer this <code>_ = f()</code> to this <code>f()</code></li>
+<li>即使忽略函数的所有返回值，也要明确地标示出来(<strong><em>感觉脱裤子放屁了</em></strong>)</li>
+</ul>
+</li>
+<li>we’ve a short form for slice initialization <code>a := []T{}</code><ul>
+<li>一直是这样用的啊，要不然咋弄？<h3 id="CI"><a href="#CI" class="headerlink" title="CI"></a>CI</h3></li>
+</ul>
+</li>
+<li>run <code>go format</code> on CI and compare diff<ul>
+<li>this will ensure that everything was generated and commited</li>
+</ul>
+</li>
+<li>to run Travis-CI with the latest Go use <code>travis 1</code><ul>
+<li>see more: <a href="https://github.com/travis-ci/travis-build/blob/master/public/version-aliases/go.json" target="_blank" rel="noopener">https://github.com/travis-ci/travis-build/blob/master/public/version-aliases/go.json</a></li>
+</ul>
+</li>
+<li>check if there are mistakes in code formatting <code>diff -u &lt;(echo -n) &lt;(gofmt -d .)</code></li>
+</ul>
+<h3 id="Concurrency"><a href="#Concurrency" class="headerlink" title="Concurrency"></a>Concurrency</h3><ul>
+<li>best candidate to make something once in a thread-safe way is <code>sync.Once</code><ul>
+<li>don’t use flags, mutexes, channels or atomics</li>
+<li>最好的保证单次执行的方式sync.Once，其他都别用</li>
+</ul>
+</li>
+<li>to block forever use <code>select{}</code>, omit channels, waiting for a signal<br>-<code>select{}</code>就是永远阻塞，里面可以不用添加任何东西<h3 id="Performance"><a href="#Performance" class="headerlink" title="Performance"></a>Performance</h3></li>
+<li>do not omit <code>defer</code><ul>
+<li>200ns speedup is negligible in most cases</li>
+<li>没必要为了200ns去刻意省略defer</li>
+</ul>
+</li>
+<li>always close http body aka <code>defer r.Body.Close()</code><ul>
+<li>unless you need leaked goroutine</li>
+<li>http要记得这样关闭，否则会协程泄露</li>
+</ul>
+</li>
+<li>filtering without allocating<pre><code class="go">  b := a[:0]
+  for _, x := range a {
+      if f(x) {
+          b = append(b, x)
+      }
+  }
+</code></pre>
+<ul>
+<li>把a中的数据过滤到b，不要先给b分配内存，在过滤的时候添加</li>
+</ul>
+</li>
+<li><code>time.Time</code> has pointer field <code>time.Location</code> and this is bad for go GC<ul>
+<li>it’s relevant only for big number of <code>time.Time</code>, use timestamp instead</li>
+<li>time.Time结构体包含了一个指针，这样会浪费GC，直接使用timestamp就行</li>
+</ul>
+</li>
+<li>prefer <code>regexp.MustCompile</code> instead of <code>regexp.Compile</code><ul>
+<li>in most cases your regex is immutable, so init it in <code>func init</code></li>
+<li>正则表示式一般定义后就不变了，在init()中初始化</li>
+</ul>
+</li>
+<li>do not overuse <code>fmt.Sprintf</code> in your hot path. It is costly due to maintaining the buffer pool and dynamic dispatches for interfaces.</li>
+<li>这个东西不要多用，那用什么呢？<ul>
+<li>if you are doing <code>fmt.Sprintf(&quot;%s%s&quot;, var1, var2)</code>, consider simple string concatenation.</li>
+<li>简单的字符串连接</li>
+<li>if you are doing <code>fmt.Sprintf(&quot;%x&quot;, var)</code>, consider using <code>hex.EncodeToString</code> or <code>strconv.FormatInt(var, 16)</code></li>
+<li>直接调用类型转换</li>
+</ul>
+</li>
+<li>always discard body e.g. <code>io.Copy(ioutil.Discard, resp.Body)</code> if you don’t use it<ul>
+<li>不使用的http body数据要主动丢掉，否则会一直占用着客户端的连接</li>
+<li>HTTP client’s Transport will not reuse connections unless the body is read to completion and closed<pre><code class="go">res, _ := client.Do(req)
+io.Copy(ioutil.Discard, res.Body)
+defer res.Body.Close()
+</code></pre>
+</li>
+</ul>
+</li>
+<li>don’t use defer in a loop or you’ll get a small memory leak<ul>
+<li>‘cause defers will grow your stack without the reason</li>
+<li>循环里面不要使用defer，会有内存泄露</li>
+</ul>
+</li>
+<li>don’t forget to stop ticker, unless you need leaked channel<pre><code class="go">ticker := time.NewTicker(1 * time.Second)
+defer ticker.Stop()
+</code></pre>
+<ul>
+<li>ticker定义了就要停，不停的是timer</li>
+</ul>
+</li>
+</ul>
+<h3 id="Build"><a href="#Build" class="headerlink" title="Build"></a>Build</h3><ul>
+<li>strip your binaries with this command <code>go build -ldflags=&quot;-s -w&quot; ...</code></li>
+<li>easy way to split test into different builds<ul>
+<li>use <code>// +build integration</code> and run them with <code>go test -v --tags integration .</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="Testing"><a href="#Testing" class="headerlink" title="Testing"></a>Testing</h3><ul>
+<li><p><code>go test -short</code> allows to reduce set of tests to be runned</p>
+<pre><code class="go">func TestSomething(t *testing.T) {
+  if testing.Short() {
+    t.Skip(&quot;skipping test in short mode.&quot;)
+  }
+}
+</code></pre>
+</li>
+<li>skip test deppending on architecture<pre><code class="go">if runtime.GOARM == &quot;arm&quot; {
+  t.Skip(&quot;this doesn&#39;t work under ARM&quot;)
+}
+</code></pre>
+</li>
+<li>prefer <code>package_test</code> name for tests, rather than <code>package</code></li>
+<li>for fast benchmark comparison we’ve a <code>benchcmp</code> tool<ul>
+<li><a href="https://godoc.org/golang.org/x/tools/cmd/benchcmp" target="_blank" rel="noopener">https://godoc.org/golang.org/x/tools/cmd/benchcmp</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="Misc"><a href="#Misc" class="headerlink" title="Misc"></a>Misc</h3><ul>
+<li>dump goroutines </li>
+</ul>
+<p><a href="https://stackoverflow.com/a/27398062/433041" target="_blank" rel="noopener">https://stackoverflow.com/a/27398062/433041</a></p>
+<pre><code class="go">    go func() {
+      sigs := make(chan os.Signal, 1)
+      signal.Notify(sigs, syscall.SIGQUIT)
+      buf := make([]byte, 1&lt;&lt;20)
+      for {
+          &lt;-sigs
+          stacklen := runtime.Stack(buf, true)
+          log.Printf(&quot;=== received SIGQUIT ===\n*** goroutine dump...\n%s\n*** end\n&quot;, buf[:stacklen])
+      }
+  }()
+</code></pre>
+<ul>
+<li>check interface implementation during compilation<pre><code class="go">  var _ io.Reader = (*MyFastReader)(nil)
+</code></pre>
+<ul>
+<li>定义一个空类型，可以帮助在编译时就检查好某接口是否实现</li>
+</ul>
+</li>
+<li>if a param of len is nil then it’s zero<ul>
+<li><a href="https://golang.org/pkg/builtin/#len" target="_blank" rel="noopener">https://golang.org/pkg/builtin/#len</a></li>
+<li>nil数据的长度是0</li>
+</ul>
+</li>
+<li>anonymous structs are cool<pre><code class="go">var hits struct {
+  sync.Mutex
+  n int
+}
+hits.Lock()
+hits.n++
+hits.Unlock()
+</code></pre>
+<ul>
+<li>匿名结构体，酷在哪</li>
+</ul>
+</li>
+<li><code>httputil.DumpRequest</code> is very useful thing, don’t create your own</li>
+</ul>
+<p><a href="https://godoc.org/net/http/httputil#DumpRequest" target="_blank" rel="noopener">https://godoc.org/net/http/httputil#DumpRequest</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://treachery.github.io/2017/11/24/golang相关/GOadvices/" data-id="cjbqqx9650000nko0rp1zz5f3" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/golang相关/">golang相关</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
 
 
-        <script type="text/ls-javascript" id="search-input-script">
-            var inputArea = document.querySelector('#search');
-            var getSearchFile = function() {
-                var path = 'search.xml';
-                searchFunc(path, 'search', 'local-search-result');
+  
+    <article id="post-管控中心/文件中转服务改进" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/11/15/管控中心/文件中转服务改进/" class="article-date">
+  <time datetime="2017-11-15T01:17:30.000Z" itemprop="datePublished">2017-11-15</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/管控中心/">管控中心</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/15/管控中心/文件中转服务改进/">文件中转服务改进</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="文件中转服务改进"><a href="#文件中转服务改进" class="headerlink" title="文件中转服务改进"></a>文件中转服务改进</h1><p>为了防止服务器在执行任务过程中关闭，造成数据丢失或一致性问题，需要一个持久化存储的方法，记录中转服务各个任务的处理状态。<br>使用sqlite创建两个表，一个文件表filestable,记录每个文件的发送进度；一个任务表jobstable，记录每个发送任务的执行状态。</p>
+<p>文件表</p>
+<table>
+<thead>
+<tr>
+<th>字段名</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>自动编号</td>
+</tr>
+<tr>
+<td>filename</td>
+<td>文件名</td>
+</tr>
+<tr>
+<td>FindTime</td>
+<td>加入时间</td>
+</tr>
+<tr>
+<td>IsInList</td>
+<td>已读入待发送队列</td>
+</tr>
+<tr>
+<td>IsFinish</td>
+<td>是否完全发送完成</td>
+</tr>
+<tr>
+<td>FinishTime</td>
+<td>发送结束时间</td>
+</tr>
+</tbody>
+</table>
+<p>任务表</p>
+<table>
+<thead>
+<tr>
+<th>字段名</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>自动编号</td>
+</tr>
+<tr>
+<td>filename</td>
+<td>文件名</td>
+</tr>
+<tr>
+<td>dstpath</td>
+<td>接收地址</td>
+</tr>
+<tr>
+<td>FindTime</td>
+<td>加入时间</td>
+</tr>
+<tr>
+<td>IsInList</td>
+<td>已读入待发送队列</td>
+</tr>
+<tr>
+<td>IsFinish</td>
+<td>是否发送完成</td>
+</tr>
+<tr>
+<td>FinishTime</td>
+<td>发送结束时间</td>
+</tr>
+<tr>
+<td>CountFailed</td>
+<td>发送失败次数</td>
+</tr>
+</tbody>
+</table>
+<h2 id="启动流程"><a href="#启动流程" class="headerlink" title="启动流程"></a>启动流程</h2><div id="flowchart-0" class="flow-chart"></div>
+
+<h2 id="执行流程"><a href="#执行流程" class="headerlink" title="执行流程"></a>执行流程</h2><div id="sequence-0"></div>
+
+<h2 id="安全退出流程"><a href="#安全退出流程" class="headerlink" title="安全退出流程"></a>安全退出流程<script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script><textarea id="flowchart-0-code" style="display: none">st=>start: 开始
+e=>end: 服务启动完成
+op1=>operation: 初始化sqlite
+op2=>operation: 第一次启动 创建表
+cond=>condition: 是否存在表
+op3=>operation: 初始化表数据
+op4=>operation: 将失败次数未超过阈值<br>却没发送成功的文件<br>标记为未取出未发送
+op5=>operation: 将失败次数未超过阈值<br>却没执行成功的任务<br>标记为未取出未执行
+op6=>operation: sqlite初始化完成
+op7=>operation: 启动文件中转服务
+op8=>operation: 解析发送器配置<br>初始化发送器<br>启动发送器
+op9=>operation: 解析派遣器配置<br>初始化派遣器<br>启动派遣器
+op10=>operation: 解析接收器配置<br>注册接收器<br>启动接收器RPC服务
+
+st->op1
+op1->cond(yes)->op3->op4->op5->op6
+op1->cond(no)->op2->op6
+op6->op7->op8->op9->op10->e</textarea><textarea id="flowchart-0-options" style="display: none">{"theme":"simple","scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("flowchart-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-0-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-0", options);</script><script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.27/webfontloader.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.4.1/snap.svg-min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/js-sequence-diagrams/1.0.6/sequence-diagram-min.js"></script><textarea id="sequence-0-code" style="display: none">RPC->>Receiver:调用接收文件接口
+Receiver->>filestable:收到文件，写入表中
+filestable->>chanReceiver:取出待发送文件放入管道
+filestable->>filestable:标记文件已经取出
+chanReceiver->>Dispatcher:从管道取出文件进行解析
+Dispatcher->>jobstable:生成派遣任务写入表
+jobstable->>chanSendJob:从表中取出任务放入管道
+jobstable->>jobstable:标记任务已取出
+chanSendJob->>MainSender:取出发送任务
+MainSender->>SubSender:将发送任务指定给具体实例
+SubSender->>Finish:发送结束
+Finish->>Finish:执行任务后回调
+Finish->>jobstable:标记任务已处理完成
+Finish->>Dispatcher:信号量通知任务结束
+Dispatcher->>Dispatcher:监测本次派遣的所有任务结束
+Dispatcher->>Dispatcher:执行派遣完成后回调
+Dispatcher->>filestable:标记文件已处理完成</textarea><textarea id="sequence-0-options" style="display: none">{"theme":"simple","scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("sequence-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("sequence-0-options").value));  var diagram = Diagram.parse(code);  diagram.drawSVG("sequence-0", options);</script></h2>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://treachery.github.io/2017/11/15/管控中心/文件中转服务改进/" data-id="cjbszwk150000hco0054c64o9" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/管控中心/">管控中心</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-管控中心/管控中心文件中转服务" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/11/02/管控中心/管控中心文件中转服务/" class="article-date">
+  <time datetime="2017-11-02T01:17:30.000Z" itemprop="datePublished">2017-11-02</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/管控中心/">管控中心</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/02/管控中心/管控中心文件中转服务/">文件中转服务逻辑</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="文件中转服务设计"><a href="#文件中转服务设计" class="headerlink" title="文件中转服务设计"></a>文件中转服务设计</h1><h2 id="总体框架"><a href="#总体框架" class="headerlink" title="总体框架"></a>总体框架</h2><ul>
+<li>充分考虑文件中转服务需要处理多种途径上报，多种途径转发，以及转发过程需要过滤，加解密，加解压等。</li>
+<li>整个文件中转服务包含4大块 接收器Recver,发送器Server,派遣器Dispatcher,总控制器FileTransfer.</li>
+</ul>
+<div id="flowchart-0" class="flow-chart"></div>
+
+<h2 id="接收器Recver"><a href="#接收器Recver" class="headerlink" title="接收器Recver"></a>接收器Recver</h2><p>接收器实现一个rpc的监听器，管控中心的日志或文件接收命令通过rpc进行文件接收。接收完成之后，文件名称和路径为特定的格式存储到特定目录，将文件名写入chanRecver</p>
+<pre><code class="go">var chanRecver chan string
+type Recver struct {
+    rpc *chanrpc.Server
+}
+
+//初始化,启动rpc监听，并注册各个回调接口
+func (r *Recver) Start() {
+}
+
+//将接收的日志存入文件，并将文件名称写入到chanRecver，每一种不同的文件上报途径，需要实现一个rpc调用接口
+func (r *Recver) handlerLogContext([]interface{}) error {
+    return nil
+}
+</code></pre>
+<h2 id="派遣器Dispatcher"><a href="#派遣器Dispatcher" class="headerlink" title="派遣器Dispatcher"></a>派遣器Dispatcher</h2><p>派遣器从chanRecver获取到需要传输的文件，根据配置文件提供的信息，调用相应接口生成发送任务，并将任务写入chanSendJob。</p>
+<p>一次派遣表示将某个文件内容转发到某些地址，因此会生成多个任务。<br>为了处理多任务顺序逻辑，在任务中加入了一个信号量semJobFin，用于表示一个任务完成。</p>
+<p>在线性派遣器中(<strong><em>同一次派遣的各个任务需要保证其顺序，例如将文件test.txt依次发往地址ftp1,ftp2,ftp3，顺序不能乱</em></strong>)，每次将一个任务发往chanSendJob中，需要阻塞等待该任务的结束信号量返回，再加入下一次任务。</p>
+<p>在并发派遣器中(<strong><em>同一个文件发往不同地址，不需要保证顺序</em></strong>)，可以直接将任务全部读取到chanSendJob，但是每个任务的信号量都需要保存到chanDisPatchFin，用于处理派遣器的结束回调。</p>
+<pre><code class="go">type SendJob struct {
+    sType     string        //发送类型
+    dstPath   string        //接收地址
+    srcFile   string        //源文件
+    callBack  []func()      //整个派遣结束的回调
+    semJobFin chan struct{} //任务结束信号量
+}
+
+//发送任务队列
+var chanSendJob chan SendJob
+
+//派遣器回调队列
+var chanDisPatchFin chan DisPatchCallBack
+
+func init() {
+    chanSendJob = make(chan SendJob, 10)
+    chanDisPatchFin = make(chan DisPatchCallBack, 10)
+}
+
+type DisPatchCallBack struct {
+    semJobFins [](&lt;-chan struct{}) //任务结束信号量
+    callBack   []func()            //整个派遣结束的回调
+}
+
+type Dispatcher struct {
+}
+
+func (dp *Dispatcher) Start() {
+    go dp.dispatchCallBack()
+    for {
+        filename := &lt;-chanRecver
+        dp.dispatch(filename)
+    }
+}
+
+//派遣器回调线程池
+func (dp *Dispatcher) dispatchCallBack() {
+    wg := sync.WaitGroup{}
+    for i := 0; i &lt; 5; i++ {
+        wg.Add(1)
+        go dp.dispatchCallBackRoutine(&amp;wg)
+    }
+    wg.Wait()
+}
+
+func (dp *Dispatcher) dispatchCallBackRoutine(wg *sync.WaitGroup) {
+    defer wg.Done()
+    for {
+        dpcb := &lt;-chanDisPatchFin
+
+        lenSem := len(dpcb.semJobFins)
+        if lenSem &gt; 0 {
+            for i := 0; i &lt; lenSem; i++ {
+                &lt;-dpcb.semJobFins[i]
             }
+        }
+        for _, cb := range dpcb.callBack {
+            cb()
+        }
+    }
+}
 
-            if(inputArea) {
-                inputArea.onfocus = function() {
-                    getSearchFile();
+//处理每个文件的派遣任务以及回调逻辑
+func (dp *Dispatcher) dispatch(filename string) {
+}
+
+//根据文件名，生成具体的发送任务和回调任务
+func (dp *Dispatcher) generateJob(filename string) ([]SendJob, []func(), bool) {
+}
+
+//每一种不同的文件发送方式，需要实现一个不同的任务生成方式
+func handlerFtpDispatch(filename string) ([]SendJob, []func(), bool) {
+}
+</code></pre>
+<h2 id="发送器Sender"><a href="#发送器Sender" class="headerlink" title="发送器Sender"></a>发送器Sender</h2><p>发送器逻辑比较简单，就是每个接收地址有一个发送器，该发送器创建多个routine不断从队列中取出发送任务来执行。(<strong><em>当然对于只接收顺序数据的地址，routines就为1</em></strong>)<br>需要注意的是，对于每一个地址我们都需要有一个发送器实例，而每一个发送实例最主要的发送方法Sender()需要重写，不能用基类的方法。所以我们在基类中加入了一个SenderType，用于在发送器实例化的时候，记录该实例指针，从而实现多态</p>
+<pre><code class="go">type FaceSender interface {
+    SendFile(sj SendJob) //发送
+    SetFlag(sj SendJob)  //设置发送结束标记
+    Start()              //开启该地址的发送线程
+    SetChan(sj SendJob)  //将任务加入该线程的发送队列
+}
+
+//每一个文件接收的地址需要实现一组发送器
+type BaseSender struct {
+    SenderType FaceSender //记录子类的对象指针，用于实现多态
+    addr       string //接收地址
+    nRoutines  int    //是否线性接收
+    chanSender chan SendJob
+}
+
+//类型转换接口，用于实现多态
+func (bs *BaseSender) SetSenderType(fs FaceSender) {
+    bs.SenderType = fs
+}
+func (bs *BaseSender) Start() {
+    log.Printf(&quot;启动参数 %+v\n&quot;, bs)
+    wg := sync.WaitGroup{}
+    for i := 0; i &lt; bs.nRoutines; i++ {
+        wg.Add(1)
+        go func() {
+            defer wg.Done()
+            for {
+                select {
+                case job := &lt;-bs.chanSender:
+                    log.Printf(&quot;取出%+v\n&quot;, job)
+                    bs.SendFile(job)
+                    bs.SetFlag(job)
+                default:
+                    log.Println(&quot;蛤》》》&quot;)
+                    time.Sleep(time.Second * 1)
                 }
             }
-        </script>
-    
+        }()
+    }
+    wg.Wait()
+}
+//调用子类的实现方法
+func (bs *BaseSender) SendFile(sj SendJob) {
+    bs.SenderType.SendFile(sj)
+}
+func (bs *BaseSender) SetFlag(sj SendJob) {
+    bs.SenderType.SetFlag(sj)
+}
 
+func (bs *BaseSender) SetChan(sj SendJob) {
+    select {
+    case bs.chanSender &lt;- sj:
+        log.Printf(&quot;添加任务:%+v\n&quot;, sj)
+    default:
+        log.Printf(&quot;添加任务失败:%+v\n&quot;, sj)
+    }
+}
 
-<!-- UC Browser Compatible -->
-<script>
-	var agent = navigator.userAgent.toLowerCase();
-	if(agent.indexOf('ucbrowser')>0) {
-		document.write('<link rel="stylesheet" href="/css/uc.css">');
-	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
-	}
-</script>
+type MainSender struct {
+    MapSenders map[string]FaceSender
+}
 
-<!-- Import prettify js  -->
+func (ms *MainSender) init() {
+    ms.MapSenders = make(map[string]FaceSender)
 
-    
+    ftpsend1 := &amp;ftpSender{
+        BaseSender{
+            addr:      &quot;ftp1&quot;,
+            nRoutines: 1,
+        },
+    }
+    ftpsend1.chanSender = make(chan SendJob, 10)
+    ftpsend1.SetSenderType(ftpsend1)
 
+    ms.MapSenders[ftpsend1.addr] = ftpsend1
 
+    ftpsend2 := &amp;ftpSender{
+        BaseSender{
+            addr:      &quot;ftp2&quot;,
+            nRoutines: 1,
+        },
+    }
+    ftpsend2.chanSender = make(chan SendJob, 10)
+    ms.MapSenders[ftpsend2.addr] = ftpsend2
+    ftpsend2.SetSenderType(ftpsend2)
 
-<!-- Window Load -->
-<!-- add class for prettify -->
-<script type="text/ls-javascript" id="window-load">
-    $(window).on('load', function() {
-        // Post_Toc parent position fixed
-        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
-    });
+    httpsend1 := &amp;httpSender{
+        BaseSender{
+            addr:      &quot;http1&quot;,
+            nRoutines: 1,
+        },
+    }
+    httpsend1.chanSender = make(chan SendJob, 10)
 
-    
-        
-    
-    
-</script>
+    ms.MapSenders[httpsend1.addr] = httpsend1
+    httpsend1.SetSenderType(httpsend1)
+}
+func (ms *MainSender) Start() {
+    //1.根据配置里面的接收地址生成多个发送器
+    ms.init()
+    wg := sync.WaitGroup{}
+    for _, sender := range ms.MapSenders {
+        wg.Add(1)
+        go func(s FaceSender) {
+            wg.Done()
+            log.Printf(&quot;启动：%+v\n&quot;, s)
+            s.Start()
+        }(sender)
+    }
 
-<!-- MathJax Load-->
-
-
-<!-- Bing Background -->
-
-
-<script type="text/ls-javascript" id="lazy-load">
-    // Offer LazyLoad
-    queue.offer(function(){
-        $('.lazy').lazyload({
-            effect : 'show'
-        });
-    });
-
-    // Start Queue
-    $(document).ready(function(){
-        setInterval(function(){
-            queue.execNext();
-        },200);
-    });
-</script>
-
-<!-- Custom Footer -->
-
-
-
-<script>
-    (function(){
-        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
-
-        for (var i = 0; i < scriptList.length; ++i) {
-            var item = scriptList[i];
-            lsloader.runInlineScript(item.id,item.id);
+    //2.从chanSendJob接收任务，派遣到对应的发送器
+    wg.Add(1)
+    go func() {
+        defer wg.Done()
+        for {
+            select {
+            case sj := &lt;-chanSendJob:
+                log.Printf(&quot;任务:%+v\n&quot;, sj)
+                if sender, ok := ms.MapSenders[sj.dstPath]; ok {
+                    sender.SetChan(sj)
+                } else {
+                    log.Println(&quot;no sender to &quot;, sj.dstPath)
+                }
+            default:
+                log.Println(&quot;读取任务失败&quot;)
+                time.Sleep(time.Second * 1)
+            }
         }
-    })()
-console.log('\n %c © Material Theme | Version: 1.5.0 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
-</script>
 
-                </main>
-            </div>
-        </body>
+    }()
+    wg.Wait()
+}
+
+type ftpSender struct {
+    BaseSender
+}
+
+func (fs *ftpSender) SendFile(sj SendJob) {
+    log.Printf(&quot;%+v 发送:%+v\n&quot;, fs, sj)
+    log.Printf(&quot;sendjob %s --&gt; %s\n&quot;, sj.srcFile, sj.dstPath)
+    for _, cb := range sj.callBack {
+        cb()
+    }
+    sj.semJobFin &lt;- struct{}{}
+}
+
+func (fs *ftpSender) SetFlag(sj SendJob) {
+    log.Printf(&quot;%+v SetFlag %+v&quot;, fs, sj)
+}
+
+type httpSender struct {
+    BaseSender
+}
+
+func (hs *httpSender) SendFile(sj SendJob) {
+    log.Printf(&quot;%+v 发送:%+v\n&quot;, hs, sj)
+    log.Printf(&quot;sendjob %s --&gt; %s\n&quot;, sj.srcFile, sj.dstPath)
+    for _, cb := range sj.callBack {
+        cb()
+    }
+    sj.semJobFin &lt;- struct{}{}
+}
+
+func (hs *httpSender) SetFlag(sj SendJob) {
+    log.Printf(&quot;%+v SetFlag %+v&quot;, hs, sj)
+}
+</code></pre>
+<h2 id="控制器FileTransfer"><a href="#控制器FileTransfer" class="headerlink" title="控制器FileTransfer"></a>控制器FileTransfer</h2><p>从配置文件初始化接收器，派遣器，发送器</p>
+<p><script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script><textarea id="flowchart-0-code" style="display: none">st=>start: 管控中心接收文件
+op1=>operation: 管控中心通过RPC调用接收器方法
+op2=>operation: Receiver将文件名写入chanReceiver
+op3=>operation: Dispatcher解析文件名称生成派遣任务
+op4=>operation: Dispatcher派遣任务到ChanSendJob
+op5=>operation: MainSender从队列取出任务
+op6=>operation: MainSender将任务分配到对应Sender
+op7=>operation: Sender将文件发送出去
+op8=>operation: Sender执行任务回调
+e=>end: 结束
+
+st->op1->op2->op3->op4
+op4->op5->op6->op7->op8->e</textarea><textarea id="flowchart-0-options" style="display: none">{"theme":"simple","scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("flowchart-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-0-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-0", options);</script></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://treachery.github.io/2017/11/02/管控中心/管控中心文件中转服务/" data-id="cjbqqt9ul0005c8o07se1rj3k" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/管控中心/">管控中心</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-管控中心/管控中心数据库连接池管理" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/10/13/管控中心/管控中心数据库连接池管理/" class="article-date">
+  <time datetime="2017-10-13T01:03:14.000Z" itemprop="datePublished">2017-10-13</time>
+</a>
     
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/管控中心/">管控中心</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/10/13/管控中心/管控中心数据库连接池管理/">数据库连接池管理</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="管控中心连接池管理"><a href="#管控中心连接池管理" class="headerlink" title="管控中心连接池管理"></a>管控中心连接池管理</h1><h2 id="使用到数据库连接的地方"><a href="#使用到数据库连接的地方" class="headerlink" title="使用到数据库连接的地方"></a>使用到数据库连接的地方</h2><h3 id="一次执行"><a href="#一次执行" class="headerlink" title="一次执行"></a>一次执行</h3><p>sql_getallobjects</p>
+<p>SQL_CreateProcForMCabstract</p>
+<p>Core_DeleteUnvalidDevice</p>
+<p>Core_Process_CreateDict,Process_Dict</p>
+<p>Device_RuleBase</p>
+<p>SQL_CreateExtentScriptTable</p>
+<p>SQL_CreateProcForExtentScriptTable</p>
+<h3 id="设备相关"><a href="#设备相关" class="headerlink" title="设备相关"></a>设备相关</h3><ol>
+<li>设备表的查询，包含Devices,MC_DevicesBasic,MC_DevicesDynamic,MC_DevicesExtend；表MC_DevicesBasic更新IsChanged</li>
+<li>表NACS_Check查询与更新</li>
+<li>表ManagerMonitorChange查询与更新</li>
+<li>过程NACS_CreateProtectedLog调用 </li>
+<li>过程Core_CreateDeviceItem调用</li>
+<li>表Device_AnalysisV2更新</li>
+<li>过程TSMS_CreateDeviceUpdateLog调用</li>
+<li>过程Core_DeviceDeleteItem调用</li>
+<li>过程TSMS_EditDeviceGroup调用</li>
+<li>过程Core_UpdateTotalUseTime调用</li>
+<li>过程Core_UpdateDevicePowerStatus调用</li>
+<li>过程Core_OnDeviceDetached调用</li>
+<li>过程Core_UpdateDeviceTime调用</li>
+</ol>
+<h3 id="实时响应的请求"><a href="#实时响应的请求" class="headerlink" title="实时响应的请求"></a>实时响应的请求</h3><ol>
+<li><p>RequestAgentForDebug</p>
+<ol>
+<li>CMD_0X90000001<ul>
+<li>表AgentDist_Result更新</li>
+</ul>
+</li>
+<li>CMD_0X90000002<ul>
+<li>过程Sys_GetUserLoginState调用</li>
+</ul>
+</li>
+<li>CMD_0X90000003<ul>
+<li>表M_ConfidentialEvents更新</li>
+</ul>
+</li>
+<li>CMD_0X90000004<ul>
+<li>表M_ConfidentialEvents查询</li>
+</ul>
+</li>
+<li>CMD_0X90000005<ul>
+<li>表Devices查询</li>
+</ul>
+</li>
+<li>CMD_0X90000006<ul>
+<li>过程Sys_GetUserLoginState调用</li>
+<li>任意数据库语句执行</li>
+</ul>
+</li>
+<li>CMD_0X90000007<ul>
+<li>过程Sys_GetUserLoginState调用</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p>RequestCheckSystem</p>
+<ol>
+<li>CMD_0X00000043<ul>
+<li>过程CK_ListUnFinishedPolicies调用</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>RequestCheckSystem<ol>
+<li>CMD_0X00000043<ul>
+<li>过程CK_ListUnFinishedPolicies调用</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>RequestDbxml<ul>
+<li>根据xml配置调用</li>
+</ul>
+</li>
+<li>RequestCheckSystem<ol>
+<li>CMD_0X00000043<ul>
+<li>过程CK_ListUnFinishedPolicies调用</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p>RequestDevices</p>
+<ol>
+<li><p>CMD_0X0000000E</p>
+<ul>
+<li>Core_GetClientRegPasswd</li>
+<li>Core_ListHardwareCategory</li>
+<li>Sub_ListCustomCategory</li>
+<li>Core_ListGroupsUser</li>
+<li>Sys_ListGroups</li>
+</ul>
+</li>
+<li><p>CMD_0X00000001,CMD_0X0000000A</p>
+<ul>
+<li>Core_GetClientRegPasswd</li>
+<li>Core_GetDeviceRegIsValid</li>
+</ul>
+</li>
+<li>CMD_0X0000001B<ul>
+<li>Core_ChangeDeviceUniqueId</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>RequestHSMS<ol>
+<li>CMD_0X00000037<ul>
+<li>Core_CreateLogSystemTimeAudit</li>
+</ul>
+</li>
+<li>CMD_0X00000035<ul>
+<li>Core_CreateDict_UnPatched</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>RequestMobileStorage<ol>
+<li>CMD_0X80000003<ul>
+<li>表UDiskLabels查询</li>
+</ul>
+</li>
+<li>CMD_0X80000004<ul>
+<li>表UDisks查询，更新</li>
+<li>Core_Update_UDisk</li>
+</ul>
+</li>
+<li>CMD_0X80000006<ul>
+<li>Sys_GetUserLoginState</li>
+</ul>
+</li>
+<li>CMD_0X8000000A<ul>
+<li>表UDisks,SecUDisks更新</li>
+</ul>
+</li>
+<li>CMD_0X8000000B<ul>
+<li>表UDisks查询，更新</li>
+<li>Core_Update_UDisk</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>RequestNACS<ol>
+<li>CMD_0X00000041<ul>
+<li>NACS_CreateSafeCheckLog</li>
+</ul>
+</li>
+<li>CMD_0X00000070<ul>
+<li>NACS_CancelProtection</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>RequestOthers<ol>
+<li>CMD_0X0000003C<ul>
+<li>UDisks查询</li>
+</ul>
+</li>
+<li>CMD_0X0000003D<ul>
+<li>Core_GetRegisteredCount</li>
+</ul>
+</li>
+<li>CMD_0X00000055<ul>
+<li>Core_Create_MobileLogin</li>
+</ul>
+</li>
+<li>CMD_0X00000079<ul>
+<li>CORE_SensitivePolicyDocking</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+<h3 id="请求上报的延后操作"><a href="#请求上报的延后操作" class="headerlink" title="请求上报的延后操作"></a>请求上报的延后操作</h3><table>
+<thead>
+<tr>
+<th>请求模块</th>
+<th>调用者</th>
+<th>过程或表</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RequestABPS</td>
+<td>CMD_0X00000062</td>
+<td>Core_CreateGatewayMonitoring</td>
+<td></td>
+</tr>
+<tr>
+<td>RequestABPS</td>
+<td>CMD_0X00000062</td>
+<td>Core_CreateGatewayNetInterface</td>
+<td></td>
+</tr>
+<tr>
+<td>RequestDevices</td>
+<td>CreateNCSACheck</td>
+<td>Core_CreateRegistAuditLog</td>
+<td></td>
+</tr>
+<tr>
+<td>RequestDevices</td>
+<td>CreateNCSACheck</td>
+<td>NACS_CreateCheck</td>
+<td></td>
+</tr>
+<tr>
+<td>RequestHeartBeat</td>
+<td>GetAttackDeviceListFromClientScan</td>
+<td>Core_CreateLog_ArpBlockedAudit</td>
+<td></td>
+</tr>
+<tr>
+<td>RequestHeartBeat</td>
+<td>CMD_0X00000031</td>
+<td>Check_AgentException</td>
+<td></td>
+</tr>
+<tr>
+<td>RequestHSMS</td>
+<td>CMD_0X00000036</td>
+<td>Core_CreateLogApplicationAudit</td>
+<td></td>
+</tr>
+<tr>
+<td>RequestHSMS</td>
+<td>CMD_0X00000036</td>
+<td>Core_CreateLogSystemAudit</td>
+<td></td>
+</tr>
+<tr>
+<td>RequestHSMS</td>
+<td>CMD_0X00000036</td>
+<td>Core_CreateLogSecurityAudit</td>
+<td></td>
+</tr>
+<tr>
+<td>RequestHSMS</td>
+<td>CMD_0X00000039</td>
+<td>Core_CreateLog_SoftwareEx</td>
+<td></td>
+</tr>
+<tr>
+<td>RequestHSMS</td>
+<td>CMD_0X00000057</td>
+<td>Core_CreateProcessRunning</td>
+<td></td>
+</tr>
+<tr>
+<td>RequestNACS</td>
+<td>CMD_0X00000041</td>
+<td>NACS_CreateSafeCheckList</td>
+<td></td>
+</tr>
+<tr>
+<td>RequestNACS</td>
+<td>CreateNCSACheck</td>
+<td>NACS_CreateCheck</td>
+<td></td>
+</tr>
+<tr>
+<td>RequestNACS</td>
+<td>CMD_0X0000006E</td>
+<td>Core_CreateTSMS_SwitchInfo</td>
+<td></td>
+</tr>
+<tr>
+<td>RequestNACS</td>
+<td>CMD_0X0000006E</td>
+<td>Core_CreateSwitchVlan</td>
+<td></td>
+</tr>
+<tr>
+<td>RequestNACS</td>
+<td>CMD_0X0000006E</td>
+<td>Core_CreateTSMS_PortInfo</td>
+<td></td>
+</tr>
+<tr>
+<td>RequestNACS</td>
+<td>CMD_0X0000006F,CMD_0X00000073</td>
+<td>Core_CreateTSMS_PortDevice</td>
+<td></td>
+</tr>
+<tr>
+<td>RequestNACS</td>
+<td>CMD_0X0000007E</td>
+<td>Core_CreateDevice_ScanResult</td>
+<td></td>
+</tr>
+<tr>
+<td>RequestOthers</td>
+<td>CMD_0X00000010</td>
+<td>Core_CreateLog_MultiIp2Boundary</td>
+<td></td>
+</tr>
+<tr>
+<td>RequestOthers</td>
+<td>CMD_0X00000011</td>
+<td>Core_CreatePolicyExecutation</td>
+<td></td>
+</tr>
+<tr>
+<td>RequestOthers</td>
+<td>CMD_0X0000001A</td>
+<td>Device_Affiliate</td>
+<td></td>
+</tr>
+<tr>
+<td>RequestOthers</td>
+<td>CMD_0X00000021</td>
+<td>Core_CreateLog_StrategySecurity</td>
+<td></td>
+</tr>
+<tr>
+<td>RequestOthers</td>
+<td>CMD_0X00000038</td>
+<td>Core_CreateLogNetworkConnectionAudit</td>
+<td></td>
+</tr>
+<tr>
+<td>RequestOthers</td>
+<td>CMD_0X0000003B</td>
+<td>Asst_CreatePassiveCheck</td>
+<td></td>
+</tr>
+<tr>
+<td>RequestOthers</td>
+<td>CMD_0X00000040</td>
+<td>Core_CreateLog_FirewallWhiteList</td>
+<td></td>
+</tr>
+<tr>
+<td>RequestOthers</td>
+<td>CMD_0X00000046</td>
+<td>Core_CreateIllegalSoftware</td>
+</tr>
+</tbody>
+</table>
+<h3 id="日志上报插入到日志缓存表"><a href="#日志上报插入到日志缓存表" class="headerlink" title="日志上报插入到日志缓存表"></a>日志上报插入到日志缓存表</h3><p>SQL_CreateStatusTable<br>SQL_CreateProcForStatusCacheLog</p>
+<h3 id="日志处理"><a href="#日志处理" class="headerlink" title="日志处理"></a>日志处理</h3><p>略，参见xmlproc_summary.xml</p>
+<h3 id="后台周期任务"><a href="#后台周期任务" class="headerlink" title="后台周期任务"></a>后台周期任务</h3><table>
+<thead>
+<tr>
+<th>模块</th>
+<th>调用者</th>
+<th>过程或表</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>nacsAdjust</td>
+<td>loadVlaninfo</td>
+<td>NACS_ListSwitchVlan</td>
+<td></td>
+</tr>
+<tr>
+<td>nacsAdjust</td>
+<td>loadMobileInfo</td>
+<td>Core_List_MobileLogin</td>
+<td></td>
+</tr>
+<tr>
+<td>dictManager</td>
+<td>LoadCfgFromDB</td>
+<td>Sys_ListConfigs,MC_Configs</td>
+<td></td>
+</tr>
+<tr>
+<td>dictManager</td>
+<td>loadNACScfgFromDB</td>
+<td>NACS_Configs,Core_GetAttackDeviceList</td>
+<td></td>
+</tr>
+<tr>
+<td>dictManager</td>
+<td>updateMemFiles</td>
+<td>DictionaryAccessControl,Sub_ListNetAccessLevel</td>
+<td></td>
+</tr>
+<tr>
+<td>dictManager</td>
+<td>updateMemFiles</td>
+<td>DictionaryAccessControl,Sub_ListNetAccessLevel</td>
+<td></td>
+</tr>
+<tr>
+<td>dictManager</td>
+<td>loadBlackIP</td>
+<td>NACS_PolPortLog</td>
+<td></td>
+</tr>
+<tr>
+<td>fileCache</td>
+<td>setAgentUpdateVersion</td>
+<td>Core_CreateMCConfig</td>
+<td></td>
+</tr>
+<tr>
+<td>licenseDog</td>
+<td>readLicenceFromDBOrFile</td>
+<td>Sys_GetLicenceText</td>
+<td></td>
+</tr>
+<tr>
+<td>policyManager</td>
+<td>deleteExecuteDeviceAction</td>
+<td>Core_EditProtectOrders</td>
+<td></td>
+</tr>
+<tr>
+<td>policyManager</td>
+<td>loadBlackListFromDatabase</td>
+<td>Sys_ListConfigs</td>
+<td></td>
+</tr>
+<tr>
+<td>policyManager</td>
+<td>loadDiscoveryPolicy</td>
+<td>Core_GetPolicy</td>
+<td></td>
+</tr>
+<tr>
+<td>policyManager</td>
+<td>loadProtectRulePolicy</td>
+<td>Core_GetProtectRuleEx</td>
+<td></td>
+</tr>
+<tr>
+<td>policyManager</td>
+<td>LoadWhiteListPolicy</td>
+<td>Core_GetWhiteList</td>
+<td></td>
+</tr>
+<tr>
+<td>policyManager</td>
+<td>loadDeviceActionString</td>
+<td>Core_ListProtectOrders,M_DeviceProtectOrders</td>
+<td></td>
+</tr>
+<tr>
+<td>scanResultManager</td>
+<td>refreshMacConfict</td>
+<td>Core_GetMacConflict</td>
+<td></td>
+</tr>
+<tr>
+<td>scanResultManager</td>
+<td>loadAnalysisResult</td>
+<td>Core_ListDevice_AnalysisV2</td>
+<td></td>
+</tr>
+<tr>
+<td>scanResultManager</td>
+<td>checkSwitchChanged</td>
+<td>TSMS_SwitchInfo</td>
+<td></td>
+</tr>
+<tr>
+<td>scanResultManager</td>
+<td>syncSwitchIdPort</td>
+<td>TSMS_SwitchPhysicsDevice</td>
+<td></td>
+</tr>
+<tr>
+<td>scanResultManager</td>
+<td>refreshMacConfict</td>
+<td>Core_GetWhiteList</td>
+<td></td>
+</tr>
+<tr>
+<td>scanResultManager</td>
+<td>updateDeviceGroups</td>
+<td>MC_DevicesBasic</td>
+<td></td>
+</tr>
+<tr>
+<td>shellExecuter</td>
+<td>backgroundRunShell</td>
+<td>MC_ExtendScriptExecuteLog</td>
+</tr>
+</tbody>
+</table>
+<h2 id="当前连接池状况"><a href="#当前连接池状况" class="headerlink" title="当前连接池状况"></a>当前连接池状况</h2><h3 id="创建情况"><a href="#创建情况" class="headerlink" title="创建情况"></a>创建情况</h3><p>dbfactory创建5个连接池，DB_POOL_IDX_LOG固定最大连接数为1，其他四个连接池最大连接池由参数MaxConnOfdbPool设定(<strong><em>默认值30</em></strong>)。logprocessor创建一个连接池，最大连接数与缓存日志表数相等，默认值2</p>
+<pre><code class="go">const (
+    DB_POOL_IDX_BEGIN  = 0 + iota //标准操作的连接池
+    DB_POOL_IDX_DEVICE            //设备操作连接池
+    DB_POOL_IDX_USER              //用户操作连接池(如注册,U盘注册等需要及时通信的)
+    DB_POOL_IDX_LOG               //用做日志插入的连接
+    DB_POOL_IDX_END               //未用
+)
+</code></pre>
+<h3 id="使用情况"><a href="#使用情况" class="headerlink" title="使用情况"></a>使用情况</h3><ol>
+<li>deviceCache使用了连接池DB_POOL_IDX_DEVICE</li>
+<li>sqlCache使用了连接池DB_POOL_IDX_USER</li>
+<li>logManager使用连接池DB_POOL_IDX_LOG</li>
+<li>日志处理使用了logprocessor的连接池</li>
+<li>其他所有地方默认使用了连接池DB_POOL_IDX_BEGIN</li>
+<li>DB_POOL_IDX_END没有使用到</li>
+<li>dbfactory刚启动创建了一个临时连接池，用于读取数据库所有对象后就关闭了</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://treachery.github.io/2017/10/13/管控中心/管控中心数据库连接池管理/" data-id="cjbqqt9ul0003c8o0dfb5nvei" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/管控中心/">管控中心</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-leaf博客/5_数据存储" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/10/12/leaf博客/5_数据存储/" class="article-date">
+  <time datetime="2017-10-12T11:01:18.000Z" itemprop="datePublished">2017-10-12</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/golang/">golang</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/10/12/leaf博客/5_数据存储/">数据存储</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>leaf是基于go语言实现开源网游服务器架构,见github.com/name5566/leaf</p>
+        
+          <p class="article-more-link">
+            <a href="/2017/10/12/leaf博客/5_数据存储/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://treachery.github.io/2017/10/12/leaf博客/5_数据存储/" data-id="cjbqle367000f20o0fqk838ck" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/leaf/">leaf</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-leaf博客/4_消息处理Processor" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/10/08/leaf博客/4_消息处理Processor/" class="article-date">
+  <time datetime="2017-10-08T10:50:20.000Z" itemprop="datePublished">2017-10-08</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/golang/">golang</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/10/08/leaf博客/4_消息处理Processor/">消息处理</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>leaf是基于go语言实现开源网游服务器架构,见github.com/name5566/leaf</p>
+        
+          <p class="article-more-link">
+            <a href="/2017/10/08/leaf博客/4_消息处理Processor/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://treachery.github.io/2017/10/08/leaf博客/4_消息处理Processor/" data-id="cjbqle367000e20o0d5xx5lo3" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/leaf/">leaf</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-leaf博客/3_gate模块" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/10/05/leaf博客/3_gate模块/" class="article-date">
+  <time datetime="2017-10-05T11:38:34.000Z" itemprop="datePublished">2017-10-05</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/golang/">golang</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/10/05/leaf博客/3_gate模块/">gate模块解析</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>leaf是基于go语言实现开源网游服务器架构,见github.com/name5566/leaf</p>
+        
+          <p class="article-more-link">
+            <a href="/2017/10/05/leaf博客/3_gate模块/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://treachery.github.io/2017/10/05/leaf博客/3_gate模块/" data-id="cjbqle36m000t20o0p8cxzbnp" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/leaf/">leaf</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-leaf博客/2_module管理" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/10/02/leaf博客/2_module管理/" class="article-date">
+  <time datetime="2017-10-02T12:03:14.000Z" itemprop="datePublished">2017-10-02</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/golang/">golang</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/10/02/leaf博客/2_module管理/">module管理</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>leaf是基于go语言实现开源网游服务器架构,见github.com/name5566/leaf</p>
+        
+          <p class="article-more-link">
+            <a href="/2017/10/02/leaf博客/2_module管理/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://treachery.github.io/2017/10/02/leaf博客/2_module管理/" data-id="cjbqle36m000i20o09rmwqyr2" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/leaf/">leaf</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-leaf博客/1_环境搭建" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/09/30/leaf博客/1_环境搭建/" class="article-date">
+  <time datetime="2017-09-30T14:15:34.000Z" itemprop="datePublished">2017-09-30</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/golang/">golang</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/09/30/leaf博客/1_环境搭建/">leaf环境搭建</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>leaf是基于go语言实现开源网游服务器架构,见github.com/name5566/leaf</p>
+        
+          <p class="article-more-link">
+            <a href="/2017/09/30/leaf博客/1_环境搭建/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://treachery.github.io/2017/09/30/leaf博客/1_环境搭建/" data-id="cjbqle372000u20o05l62l1cx" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/leaf/">leaf</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+
+  <nav id="page-nav">
+    
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">下一页 &raquo;</a>
+  </nav>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/golang/">golang</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/golang相关/">golang相关</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/博客栈/">博客栈</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/简历/">简历</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/管控中心/">管控中心</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/golang相关/">golang相关</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/leaf/">leaf</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/博客/">博客</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/简历/">简历</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/管控中心/">管控中心</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/golang相关/" style="font-size: 13.33px;">golang相关</a> <a href="/tags/leaf/" style="font-size: 16.67px;">leaf</a> <a href="/tags/博客/" style="font-size: 10px;">博客</a> <a href="/tags/简历/" style="font-size: 10px;">简历</a> <a href="/tags/管控中心/" style="font-size: 20px;">管控中心</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">十二月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">十一月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">十月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">九月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">七月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">四月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">七月 2016</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/12/28/个人简历/">个人简历</a>
+          </li>
+        
+          <li>
+            <a href="/2017/11/24/golang相关/GOadvices/">GOadvices</a>
+          </li>
+        
+          <li>
+            <a href="/2017/11/15/管控中心/文件中转服务改进/">文件中转服务改进</a>
+          </li>
+        
+          <li>
+            <a href="/2017/11/02/管控中心/管控中心文件中转服务/">文件中转服务逻辑</a>
+          </li>
+        
+          <li>
+            <a href="/2017/10/13/管控中心/管控中心数据库连接池管理/">数据库连接池管理</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 treachery<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
 </html>
